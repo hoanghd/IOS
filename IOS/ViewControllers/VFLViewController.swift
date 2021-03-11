@@ -2,63 +2,67 @@
 import UIKit
 
 class VFLViewController: BaseViewController {
-    let button: UIButton = {
+    let button1_1: UIButton = {
         var button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Send", for: .normal)
+        button.setImage(UIImage(named: "Camera")?.withRenderingMode(.alwaysTemplate), for: .normal)
         button.setTitleColor(.blue, for: .highlighted)
         button.backgroundColor = .blue
         return button
     }()
     
-    let labelField: UILabel = {
-        let labelField = UILabel()
-        labelField.translatesAutoresizingMaskIntoConstraints = false
-        labelField.text = "I made a label on the screen #toogood4you"
-        labelField.textColor = .red
-        labelField.numberOfLines = 5
-        labelField.backgroundColor = .blue
-        labelField.textAlignment = .center
-        return labelField
+    let button1_2: UIButton = {
+        var button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Cancel1", for: .normal)
+        button.setTitleColor(.blue, for: .highlighted)
+        button.backgroundColor = .blue
+        return button
+    }()
+    
+    let button2_1: UIButton = {
+        var button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Send2", for: .normal)
+        button.setTitleColor(.blue, for: .highlighted)
+        button.backgroundColor = .blue
+        return button
+    }()
+    
+    let button2_2: UIButton = {
+        var button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Cancel2", for: .normal)
+        button.setTitleColor(.blue, for: .highlighted)
+        button.backgroundColor = .blue
+        return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubviews( button1_1, button1_2, button2_1, button2_2 )
         
-        self.view.addSubview( button )
-        self.view.addSubview( labelField )
-
-        NSLayoutConstraint.activate({
-            var constraints: [NSLayoutConstraint] = []
-            let views: [String: Any] = [
-                "button": button,
-                "labelField": labelField
+        NSLayoutConstraint.visual(
+            [
+                "H:|-[button1_1]-[button1_2]": [ .alignAllCenterY ],
+                "H:|-pl_s-[button2_1]-[button2_2]": [ .alignAllCenterY ],
+                "V:|-20-[button1_1]-50-[button2_1]": []
+            ],
+            [
+                "button1_1": button1_1,
+                "button1_2": button1_2,
+                "button2_1": button2_1,
+                "button2_2": button2_2
+            ],
+            [
+                "b1w": 150,
+                "pl_s": 50
             ]
-            
-            constraints.append(contentsOf: NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|-50-[button]",
-                metrics: nil,
-                views: views
-            ))
-            
-            constraints.append(contentsOf: NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|-50-[labelField]",
-                metrics: nil,
-                views: views
-            ))
-            
-            constraints.append(contentsOf: NSLayoutConstraint.constraints(
-                withVisualFormat: "|-8-[button]-[labelField]-8-|",
-                metrics: nil,
-                views: views
-            ))
-            
-            return constraints
-        }())
+        )
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        //self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 }

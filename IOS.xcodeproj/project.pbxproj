@@ -12,6 +12,8 @@
 		C71BBFBA25F885D6009845CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71BBFB825F885D6009845CC /* LaunchScreen.storyboard */; };
 		C71BBFC425F8865D009845CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71BBFC325F8865D009845CC /* BaseViewController.swift */; };
 		C71BBFC925F88750009845CC /* VFLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71BBFC825F88750009845CC /* VFLViewController.swift */; };
+		C7913ED925F9A97F00D2D6D5 /* UIViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913ED825F9A97F00D2D6D5 /* UIViewUtil.swift */; };
+		C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		C71BBFBB25F885D6009845CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C71BBFC325F8865D009845CC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C71BBFC825F88750009845CC /* VFLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLViewController.swift; sourceTree = "<group>"; };
+		C7913ED825F9A97F00D2D6D5 /* UIViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtil.swift; sourceTree = "<group>"; };
+		C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		C71BBFAC25F885D2009845CC /* IOS */ = {
 			isa = PBXGroup;
 			children = (
+				C7913ED725F9A96500D2D6D5 /* Util */,
 				C71BBFC225F88634009845CC /* ViewControllers */,
 				C71BBFAD25F885D2009845CC /* AppDelegate.swift */,
 				C71BBFB625F885D6009845CC /* Assets.xcassets */,
@@ -70,6 +75,15 @@
 				C71BBFC825F88750009845CC /* VFLViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C7913ED725F9A96500D2D6D5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C7913ED825F9A97F00D2D6D5 /* UIViewUtil.swift */,
+				C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +157,8 @@
 			files = (
 				C71BBFC425F8865D009845CC /* BaseViewController.swift in Sources */,
 				C71BBFAE25F885D2009845CC /* AppDelegate.swift in Sources */,
+				C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift in Sources */,
+				C7913ED925F9A97F00D2D6D5 /* UIViewUtil.swift in Sources */,
 				C71BBFC925F88750009845CC /* VFLViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
