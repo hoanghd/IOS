@@ -40,13 +40,17 @@ class VFLViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubviews( button1_1, button1_2, button2_1, button2_2 )
+        self.view.addSubviews( button1_1 , button1_2, button2_1, button2_2 )
+        
+        NSLayoutConstraint.activate([
+            button2_1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button2_2.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
         
         NSLayoutConstraint.visual(
             [
                 "H:|-[button1_1]-[button1_2]": [ .alignAllCenterY ],
-                "H:|-pl_s-[button2_1]-[button2_2]": [ .alignAllCenterY ],
-                "V:|-20-[button1_1]-50-[button2_1]": []
+                "V:|-20-[button1_1]-50-[button2_1]-50-[button2_2]": []
             ],
             [
                 "button1_1": button1_1,
@@ -54,11 +58,11 @@ class VFLViewController: BaseViewController {
                 "button2_1": button2_1,
                 "button2_2": button2_2
             ],
-            [
-                "b1w": 150,
-                "pl_s": 50
-            ]
+            nil
         )
+        
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
