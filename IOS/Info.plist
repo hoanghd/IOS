@@ -44,5 +44,7 @@
 	</array>
 	<key>BaseUrl</key>
 	<string>$(BASE_URL)</string>
+    <key>FacoName</key>
+    <string>$(FACO_NAME)</string>
 </dict>
 </plist>

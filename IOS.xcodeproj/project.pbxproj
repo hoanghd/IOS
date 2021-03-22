@@ -29,6 +29,7 @@
 		C7531F732608934100532658 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		C7531F7626089A5000532658 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		C7531F7926089A8900532658 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		C7531F7B26089F0400532658 /* Faco.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Faco.xcconfig; sourceTree = "<group>"; };
 		C7913ED825F9A97F00D2D6D5 /* UIViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtil.swift; sourceTree = "<group>"; };
 		C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +90,7 @@
 				C7531F6726088C9F00532658 /* Staging.xcconfig */,
 				C7531F7626089A5000532658 /* Debug.xcconfig */,
 				C7531F7926089A8900532658 /* Release.xcconfig */,
+				C7531F7B26089F0400532658 /* Faco.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";

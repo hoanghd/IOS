@@ -1,1 +1,3 @@
+#include "./Faco.xcconfig"
+
 BASE_URL = stg.fbc.local
