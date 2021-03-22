@@ -25,10 +25,10 @@
 		C71BBFBB25F885D6009845CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C71BBFC325F8865D009845CC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C71BBFC825F88750009845CC /* VFLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLViewController.swift; sourceTree = "<group>"; };
-		C7531F6426088C1600532658 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
-		C7531F6626088C8900532658 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		C7531F6726088C9F00532658 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		C7531F732608934100532658 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		C7531F7626089A5000532658 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		C7531F7926089A8900532658 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		C7913ED825F9A97F00D2D6D5 /* UIViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtil.swift; sourceTree = "<group>"; };
 		C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,9 +86,9 @@
 		C7531F6526088C6800532658 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				C7531F6426088C1600532658 /* Development.xcconfig */,
-				C7531F6626088C8900532658 /* Production.xcconfig */,
 				C7531F6726088C9F00532658 /* Staging.xcconfig */,
+				C7531F7626089A5000532658 /* Debug.xcconfig */,
+				C7531F7926089A8900532658 /* Release.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -197,6 +197,7 @@
 /* Begin XCBuildConfiguration section */
 		C71BBFBC25F885D6009845CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7531F7626089A5000532658 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -258,7 +259,7 @@
 		};
 		C71BBFBD25F885D6009845CC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7531F6626088C8900532658 /* Production.xcconfig */;
+			baseConfigurationReference = C7531F7926089A8900532658 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -314,6 +315,7 @@
 		};
 		C71BBFBF25F885D6009845CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7531F7626089A5000532658 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -333,7 +335,7 @@
 		};
 		C71BBFC025F885D6009845CC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7531F6626088C8900532658 /* Production.xcconfig */;
+			baseConfigurationReference = C7531F7926089A8900532658 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -433,88 +435,6 @@
 			};
 			name = Staging;
 		};
-		C7531F6E26088D3D00532658 /* Development */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7531F6426088C1600532658 /* Development.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Development;
-		};
-		C7531F6F26088D3D00532658 /* Development */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7531F6426088C1600532658 /* Development.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7N7GQVYCA5;
-				INFOPLIST_FILE = IOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fabrica-vietnam.IOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Development;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -522,7 +442,6 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C71BBFBC25F885D6009845CC /* Debug */,
-				C7531F6E26088D3D00532658 /* Development */,
 				C7531F6B26088D0B00532658 /* Staging */,
 				C71BBFBD25F885D6009845CC /* Release */,
 			);
@@ -533,7 +452,6 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C71BBFBF25F885D6009845CC /* Debug */,
-				C7531F6F26088D3D00532658 /* Development */,
 				C7531F6C26088D0B00532658 /* Staging */,
 				C71BBFC025F885D6009845CC /* Release */,
 			);
