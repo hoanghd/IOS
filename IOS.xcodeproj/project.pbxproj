@@ -69,8 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				C7802E182625824C00518F39 /* View */,
-				C77A6FBD2609843500B51EFD /* Services */,
-				C77A6FBB2609835500B51EFD /* Models */,
 				C7531F6526088C6800532658 /* Config */,
 				C7913ED725F9A96500D2D6D5 /* Util */,
 				C71BBFC225F88634009845CC /* ViewControllers */,
@@ -101,20 +99,6 @@
 				C7531F7B26089F0400532658 /* Faco.xcconfig */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		C77A6FBB2609835500B51EFD /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		C77A6FBD2609843500B51EFD /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		C7802E182625824C00518F39 /* View */ = {
