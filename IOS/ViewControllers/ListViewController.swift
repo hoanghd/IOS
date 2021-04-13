@@ -25,8 +25,8 @@ class ListViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         let tableView = UITableView()
         
         tableView.register(ContactTableViewCell.self, forCellReuseIdentifier: "cell")
-        
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.isScrollEnabled = true
         tableView.dataSource = self
         tableView.delegate = self
         
