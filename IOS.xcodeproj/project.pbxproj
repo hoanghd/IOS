@@ -13,6 +13,7 @@
 		C71BBFC425F8865D009845CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71BBFC325F8865D009845CC /* BaseViewController.swift */; };
 		C71BBFC925F88750009845CC /* VFLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71BBFC825F88750009845CC /* VFLViewController.swift */; };
 		C7531F742608934100532658 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7531F732608934100532658 /* Utility.swift */; };
+		C7802E1A2625825D00518F39 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802E192625825D00518F39 /* ContactTableViewCell.swift */; };
 		C7913ED925F9A97F00D2D6D5 /* UIViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913ED825F9A97F00D2D6D5 /* UIViewUtil.swift */; };
 		C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift */; };
 		C7C93EAD26256E7000C2C958 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C93EAC26256E7000C2C958 /* ListViewController.swift */; };
@@ -31,6 +32,7 @@
 		C7531F7626089A5000532658 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		C7531F7926089A8900532658 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		C7531F7B26089F0400532658 /* Faco.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Faco.xcconfig; sourceTree = "<group>"; };
+		C7802E192625825D00518F39 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		C7913ED825F9A97F00D2D6D5 /* UIViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtil.swift; sourceTree = "<group>"; };
 		C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintUtil.swift; sourceTree = "<group>"; };
 		C7C93EAC26256E7000C2C958 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		C71BBFAC25F885D2009845CC /* IOS */ = {
 			isa = PBXGroup;
 			children = (
+				C7802E182625824C00518F39 /* View */,
 				C77A6FBD2609843500B51EFD /* Services */,
 				C77A6FBB2609835500B51EFD /* Models */,
 				C7531F6526088C6800532658 /* Config */,
@@ -112,6 +115,14 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C7802E182625824C00518F39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7802E192625825D00518F39 /* ContactTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C7913ED725F9A96500D2D6D5 /* Util */ = {
@@ -197,6 +208,7 @@
 				C71BBFAE25F885D2009845CC /* AppDelegate.swift in Sources */,
 				C7531F742608934100532658 /* Utility.swift in Sources */,
 				C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift in Sources */,
+				C7802E1A2625825D00518F39 /* ContactTableViewCell.swift in Sources */,
 				C7913ED925F9A97F00D2D6D5 /* UIViewUtil.swift in Sources */,
 				C71BBFC925F88750009845CC /* VFLViewController.swift in Sources */,
 				C7C93EAD26256E7000C2C958 /* ListViewController.swift in Sources */,
