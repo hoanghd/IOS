@@ -4,20 +4,6 @@ import Photos
 import Alamofire
 
 class UpViewController: BaseViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    lazy var goButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Go", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-        
-        button.layer.cornerRadius = 6.0
-        button.layer.borderWidth  = 2
-        button.layer.borderColor  = UIColor.red.cgColor
-        
-        button.addTarget(self, action:#selector(goClicked), for: .touchUpInside)
-        return button
-    }()
-    
     lazy var uploadButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -31,8 +17,6 @@ class UpViewController: BaseViewController, UIImagePickerControllerDelegate, UIN
         button.addTarget(self, action:#selector(buttonClicked), for: .touchUpInside)
         return button
     }()
-    
-    //lazy var afManager
     
     lazy var picker: UIImagePickerController = {
         let picker = UIImagePickerController()
@@ -61,11 +45,6 @@ class UpViewController: BaseViewController, UIImagePickerControllerDelegate, UIN
             case .denied, .restricted: break
             default: break
         }
-    }
-    
-    @objc func goClicked() {
-        let listViewController = ListViewController()
-        self.navigationController?.pushViewController(listViewController, animated: true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -97,16 +76,12 @@ class UpViewController: BaseViewController, UIImagePickerControllerDelegate, UIN
     }
     
     override func layout() {
-        safeView.addSubviews( uploadButton, goButton )
+        safeView.addSubviews( uploadButton )
         
         NSLayoutConstraint.activate([
             uploadButton.widthAnchor.constraint(equalToConstant: 100),
             uploadButton.centerXAnchor.constraint(equalTo: safeView.centerXAnchor),
-            uploadButton.centerYAnchor.constraint(equalTo: safeView.centerYAnchor),
-            
-            goButton.widthAnchor.constraint(equalToConstant: 100),
-            goButton.centerXAnchor.constraint(equalTo: safeView.centerXAnchor),
-            goButton.centerYAnchor.constraint(equalTo: safeView.centerYAnchor, constant: 50),
+            uploadButton.centerYAnchor.constraint(equalTo: safeView.centerYAnchor)
         ])
     }
 }
