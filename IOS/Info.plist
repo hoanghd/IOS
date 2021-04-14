@@ -22,6 +22,8 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+    <key>NSCameraUsageDescription</key>
+    <string>This app wants to take pictures.</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>This app uses your photos.</string>
     <key>NSAppTransportSecurity</key>

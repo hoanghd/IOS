@@ -1,6 +1,6 @@
 import UIKit
 
-class ListViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
+class ListViewController: BaseViewController {
     let contacts:[[String]] = [
         ["Elon Musk",       "+1-201-3141-5926"],
         ["Bill Gates",      "+1-202-5358-9793"],
@@ -33,6 +33,23 @@ class ListViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         return tableView
     }()
     
+    override func layout() {
+        self.safeView.addSubviews( tableView )
+        
+        NSLayoutConstraint.visual(
+            [
+                "H:|[tableView]|": [],
+                "V:|[tableView]|": []
+            ],
+            [
+                "tableView": tableView
+            ],
+            nil
+        )
+    }
+}
+
+extension ListViewController: UITableViewDelegate, UITableViewDataSource{
     //number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
@@ -49,20 +66,5 @@ class ListViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
-    }
-    
-    override func layout() {
-        self.safeView.addSubviews( tableView )
-        
-        NSLayoutConstraint.visual(
-            [
-                "H:|[tableView]|": [],
-                "V:|[tableView]|": []
-            ],
-            [
-                "tableView": tableView
-            ],
-            nil
-        )
     }
 }

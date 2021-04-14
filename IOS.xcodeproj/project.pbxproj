@@ -14,6 +14,7 @@
 		C71BBFC425F8865D009845CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71BBFC325F8865D009845CC /* BaseViewController.swift */; };
 		C71BBFC925F88750009845CC /* VFLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71BBFC825F88750009845CC /* VFLViewController.swift */; };
 		C740710A26268A92006C93CA /* UpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740710926268A92006C93CA /* UpViewController.swift */; };
+		C740710E2626C2F6006C93CA /* MpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740710D2626C2F5006C93CA /* MpViewController.swift */; };
 		C7802E1A2625825D00518F39 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802E192625825D00518F39 /* ContactTableViewCell.swift */; };
 		C7913ED925F9A97F00D2D6D5 /* UIViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913ED825F9A97F00D2D6D5 /* UIViewUtil.swift */; };
 		C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift */; };
@@ -32,6 +33,7 @@
 		C71BBFC325F8865D009845CC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C71BBFC825F88750009845CC /* VFLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLViewController.swift; sourceTree = "<group>"; };
 		C740710926268A92006C93CA /* UpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpViewController.swift; sourceTree = "<group>"; };
+		C740710D2626C2F5006C93CA /* MpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MpViewController.swift; sourceTree = "<group>"; };
 		C7802E192625825D00518F39 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		C7913ED825F9A97F00D2D6D5 /* UIViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtil.swift; sourceTree = "<group>"; };
 		C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintUtil.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				C71BBFC825F88750009845CC /* VFLViewController.swift */,
 				C7C93EAC26256E7000C2C958 /* ListViewController.swift */,
 				C740710926268A92006C93CA /* UpViewController.swift */,
+				C740710D2626C2F5006C93CA /* MpViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				C7913ED925F9A97F00D2D6D5 /* UIViewUtil.swift in Sources */,
 				C740710A26268A92006C93CA /* UpViewController.swift in Sources */,
 				C71BBFC925F88750009845CC /* VFLViewController.swift in Sources */,
+				C740710E2626C2F6006C93CA /* MpViewController.swift in Sources */,
 				C7C93EAD26256E7000C2C958 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

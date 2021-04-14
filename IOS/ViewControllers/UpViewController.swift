@@ -3,7 +3,7 @@ import UIKit
 import Photos
 import Alamofire
 
-class UpViewController: BaseViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class UpViewController: BaseViewController {
     lazy var uploadButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -47,6 +47,18 @@ class UpViewController: BaseViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
+    override func layout() {
+        safeView.addSubviews( uploadButton )
+        
+        NSLayoutConstraint.activate([
+            uploadButton.widthAnchor.constraint(equalToConstant: 100),
+            uploadButton.centerXAnchor.constraint(equalTo: safeView.centerXAnchor),
+            uploadButton.centerYAnchor.constraint(equalTo: safeView.centerYAnchor)
+        ])
+    }
+}
+
+extension UpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let imageUrl = info[.imageURL]{
             let parameters: Parameters = [
@@ -73,15 +85,5 @@ class UpViewController: BaseViewController, UIImagePickerControllerDelegate, UIN
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
-    }
-    
-    override func layout() {
-        safeView.addSubviews( uploadButton )
-        
-        NSLayoutConstraint.activate([
-            uploadButton.widthAnchor.constraint(equalToConstant: 100),
-            uploadButton.centerXAnchor.constraint(equalTo: safeView.centerXAnchor),
-            uploadButton.centerYAnchor.constraint(equalTo: safeView.centerYAnchor)
-        ])
     }
 }
