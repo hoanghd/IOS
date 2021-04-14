@@ -6,6 +6,6 @@ target 'IOS' do
   use_frameworks!
 
   # Pods for IOS
-  pod 'Alamofire', '~> 5.2'
+  pod 'Alamofire', '~> 5.4'
   
 end

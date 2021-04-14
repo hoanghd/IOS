@@ -61,8 +61,6 @@ class VFLViewController: BaseViewController {
             nil
         )
         
-        print( Utility.config("FacoName")! )
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
