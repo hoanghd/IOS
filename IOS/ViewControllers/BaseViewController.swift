@@ -19,9 +19,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func layout(){
-        
-    }
+    func layout(){}
     
     override func viewDidLoad() {
         super.viewDidLoad()
