@@ -40,7 +40,7 @@ class VFLViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubviews( button1_1 , button1_2, button2_1, button2_2 )
+        self.safeView.addSubviews( button1_1 , button1_2, button2_1, button2_2 )
         
         NSLayoutConstraint.activate([
             button2_1.centerXAnchor.constraint(equalTo: view.centerXAnchor),

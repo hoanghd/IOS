@@ -51,9 +51,8 @@ class ListViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         print("You tapped cell number \(indexPath.row).")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.addSubviews( tableView )
+    override func layout() {
+        self.safeView.addSubviews( tableView )
         
         NSLayoutConstraint.visual(
             [
