@@ -12,4 +12,5 @@
 # Research
 ~~~
 1. local stored
+2. UICollectionViewFlowLayout (left -> right)
 ~~~

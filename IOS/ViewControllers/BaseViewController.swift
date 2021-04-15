@@ -11,6 +11,10 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         return safeView
     }()
     
+    override var shouldAutorotate : Bool {
+        return false
+    }
+    
     init() {
         super.init(nibName: nil, bundle: nil)
     }
