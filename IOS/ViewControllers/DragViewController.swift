@@ -1,7 +1,7 @@
 import UIKit
 
 class DragViewController: BaseViewController {
-    let rows: [[String: String]] = [
+    var rows: [[String: String]] = [
         ["cell": "large", "title": "コーションプレート", "src": "https://img1.kurumaerabi.com/image/202101/226/e1bf4906.jpg" ],
         ["cell": "large", "title": "メイン" , "src": "https://img0.kurumaerabi.com/image/202101/228/c387fa43.jpg"],
         ["cell": "large", "title": "後面", "src": "https://img1.kurumaerabi.com/image/202101/227/157b90a2.jpg" ],
@@ -41,9 +41,14 @@ class DragViewController: BaseViewController {
         collectionView.register(LargePhotoCollectionViewCell.self, forCellWithReuseIdentifier: "large")
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.dragInteractionEnabled = true
         collectionView.backgroundColor = .white
+        
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        collectionView.dragDelegate = self
+        collectionView.dropDelegate = self
         
         return collectionView
     }()
@@ -67,6 +72,15 @@ class DragViewController: BaseViewController {
 }
 
 extension DragViewController: UICollectionViewDataSource, UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+       print("Starting Index: \(sourceIndexPath.item)")
+       print("Ending Index: \(destinationIndexPath.item)")
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return rows.count
     }
@@ -87,9 +101,45 @@ extension DragViewController: UICollectionViewDelegateFlowLayout{
         
         
         if( indexPath.row < 6 ){
-            return CGSize(width: (width - spacing * 4)/3, height: height)
+            return CGSize(width: (width - (spacing + 1) * 4)/3, height: height)
         }
         
-        return CGSize(width: (width - spacing * 2), height: height * 0.6)
+        return CGSize(width: (width - (spacing + 1) * 2), height: height * 0.6)
+    }
+}
+
+extension DragViewController: UICollectionViewDragDelegate{
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        let row = rows[ indexPath.row ]
+        let rowProvider = NSItemProvider(object: row["title"]! as NSString)
+        let dragItem = UIDragItem(itemProvider: rowProvider)
+        dragItem.localObject = row
+        return [dragItem]
+    }
+}
+
+extension DragViewController: UICollectionViewDropDelegate{
+    func collectionView(_ collectionView: UICollectionView, canHandle session: UIDropSession) -> Bool {
+        return session.canLoadObjects(ofClass: NSString.self)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal{
+        return UICollectionViewDropProposal(operation: .copy, intent: .insertIntoDestinationIndexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+        guard let indexPath = coordinator.destinationIndexPath else { return }
+        print(indexPath.row)
+        if coordinator.session.localDragSession != nil {
+            for item in coordinator.items {
+                guard let sourceIndex = item.sourceIndexPath else {
+                  return
+                }
+                
+                (rows[indexPath.row]["src"], rows[sourceIndex.row]["src"]) = (rows[sourceIndex.row]["src"], rows[indexPath.row]["src"])
+                
+                collectionView.reloadData()
+            }
+        }
     }
 }
