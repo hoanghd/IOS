@@ -102,9 +102,13 @@ extension DragViewController: UICollectionViewDelegateFlowLayout{
 extension DragViewController: UICollectionViewDragDelegate{
     func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
         let row = rows[ indexPath.row ]
+        
+        if( row["src"] == "" || row["title"] == ""){
+            return []
+        }
+        
         let rowProvider = NSItemProvider(object: row["title"]! as NSString)
         let dragItem = UIDragItem(itemProvider: rowProvider)
-        dragItem.localObject = row
         return [dragItem]
     }
 }
@@ -115,12 +119,21 @@ extension DragViewController: UICollectionViewDropDelegate{
     }
     
     func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal{
+        if(
+            session.localDragSession == nil ||
+            !collectionView.hasActiveDrag ||
+            destinationIndexPath == nil ||
+            rows[destinationIndexPath!.row]["cell"] == "cell"
+        ){
+            return UICollectionViewDropProposal(operation: .forbidden)
+        }
+        
         return UICollectionViewDropProposal(operation: .copy, intent: .insertIntoDestinationIndexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
         guard let indexPath = coordinator.destinationIndexPath else { return }
-        print(indexPath.row)
+        
         if coordinator.session.localDragSession != nil {
             for item in coordinator.items {
                 guard let sourceIndex = item.sourceIndexPath else {
@@ -128,7 +141,6 @@ extension DragViewController: UICollectionViewDropDelegate{
                 }
                 
                 (rows[indexPath.row]["src"], rows[sourceIndex.row]["src"]) = (rows[sourceIndex.row]["src"], rows[indexPath.row]["src"])
-                
                 collectionView.reloadData()
             }
         }
