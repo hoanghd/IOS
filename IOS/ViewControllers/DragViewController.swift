@@ -72,15 +72,6 @@ class DragViewController: BaseViewController {
 }
 
 extension DragViewController: UICollectionViewDataSource, UICollectionViewDelegate{
-    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-       print("Starting Index: \(sourceIndexPath.item)")
-       print("Ending Index: \(destinationIndexPath.item)")
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return rows.count
     }
