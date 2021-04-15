@@ -17,6 +17,10 @@
 		C740710E2626C2F6006C93CA /* MpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740710D2626C2F5006C93CA /* MpViewController.swift */; };
 		C74071202626DE8E006C93CA /* DragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740711F2626DE8E006C93CA /* DragViewController.swift */; };
 		C7802E1A2625825D00518F39 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802E192625825D00518F39 /* ContactTableViewCell.swift */; };
+		C78425DB2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DA2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift */; };
+		C78425DE2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DD2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift */; };
+		C78425E72627E5F30007B9C7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425E62627E5F30007B9C7 /* PhotoCollectionViewCell.swift */; };
+		C78425EA2627F6650007B9C7 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425E92627F6650007B9C7 /* CALayer.swift */; };
 		C7913ED925F9A97F00D2D6D5 /* UIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913ED825F9A97F00D2D6D5 /* UIViews.swift */; };
 		C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraints.swift */; };
 		C7C93EAD26256E7000C2C958 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C93EAC26256E7000C2C958 /* ListViewController.swift */; };
@@ -37,6 +41,10 @@
 		C740710D2626C2F5006C93CA /* MpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MpViewController.swift; sourceTree = "<group>"; };
 		C740711F2626DE8E006C93CA /* DragViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragViewController.swift; sourceTree = "<group>"; };
 		C7802E192625825D00518F39 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		C78425DA2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargePhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		C78425DD2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		C78425E62627E5F30007B9C7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		C78425E92627F6650007B9C7 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		C7913ED825F9A97F00D2D6D5 /* UIViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViews.swift; sourceTree = "<group>"; };
 		C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraints.swift; sourceTree = "<group>"; };
 		C7C93EAC26256E7000C2C958 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -103,9 +111,28 @@
 		C7802E182625824C00518F39 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C7802E192625825D00518F39 /* ContactTableViewCell.swift */,
+				C78425E12627E4F10007B9C7 /* List */,
+				C78425E02627E4D50007B9C7 /* Drag */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C78425E02627E4D50007B9C7 /* Drag */ = {
+			isa = PBXGroup;
+			children = (
+				C78425DA2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift */,
+				C78425DD2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift */,
+				C78425E62627E5F30007B9C7 /* PhotoCollectionViewCell.swift */,
+			);
+			path = Drag;
+			sourceTree = "<group>";
+		};
+		C78425E12627E4F10007B9C7 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C7802E192625825D00518F39 /* ContactTableViewCell.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		C7913ED725F9A96500D2D6D5 /* Extensions */ = {
@@ -113,6 +140,7 @@
 			children = (
 				C7913ED825F9A97F00D2D6D5 /* UIViews.swift */,
 				C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraints.swift */,
+				C78425E92627F6650007B9C7 /* CALayer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -249,13 +277,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C71BBFC425F8865D009845CC /* BaseViewController.swift in Sources */,
+				C78425E72627E5F30007B9C7 /* PhotoCollectionViewCell.swift in Sources */,
 				C71BBFAE25F885D2009845CC /* AppDelegate.swift in Sources */,
 				C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraints.swift in Sources */,
+				C78425DE2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift in Sources */,
 				C7802E1A2625825D00518F39 /* ContactTableViewCell.swift in Sources */,
 				C7913ED925F9A97F00D2D6D5 /* UIViews.swift in Sources */,
 				C740710A26268A92006C93CA /* UpViewController.swift in Sources */,
 				C71BBFC925F88750009845CC /* VFLViewController.swift in Sources */,
+				C78425DB2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift in Sources */,
 				C740710E2626C2F6006C93CA /* MpViewController.swift in Sources */,
+				C78425EA2627F6650007B9C7 /* CALayer.swift in Sources */,
 				C74071202626DE8E006C93CA /* DragViewController.swift in Sources */,
 				C7C93EAD26256E7000C2C958 /* ListViewController.swift in Sources */,
 			);
