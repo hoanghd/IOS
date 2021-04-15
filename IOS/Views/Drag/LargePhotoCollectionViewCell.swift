@@ -37,13 +37,27 @@ class LargePhotoCollectionViewCell: PhotoCollectionViewCell{
         return title
     }()
     
+    lazy var button: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "Delete"), for: .normal)
+        button.addTarget(self, action:#selector(removeImage), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func removeImage() {
+        imageView.image = UIImage(named:"NoImage")
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        addSubviews(title, imageView)
+        addSubviews(imageView, title, button)
         
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
+            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor),
+            button.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
+            button.topAnchor.constraint(equalTo: imageView.topAnchor)
         ])
         
         NSLayoutConstraint.visual(
