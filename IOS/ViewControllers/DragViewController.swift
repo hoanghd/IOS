@@ -2,17 +2,17 @@ import UIKit
 
 class DragViewController: BaseViewController {
     let rows: [[String: String]] = [
-        ["cell": "large", "title": "コーションプレート", "src": "" ],
-        ["cell": "large", "title": "メイン" , "src": ""],
-        ["cell": "large", "title": "後面", "src": "" ],
-        ["cell": "large", "title": "内装", "src": "" ],
-        ["cell": "large", "title": "エンジン", "src": "" ],
+        ["cell": "large", "title": "コーションプレート", "src": "https://img1.kurumaerabi.com/image/202101/226/e1bf4906.jpg" ],
+        ["cell": "large", "title": "メイン" , "src": "https://img0.kurumaerabi.com/image/202101/228/c387fa43.jpg"],
+        ["cell": "large", "title": "後面", "src": "https://img1.kurumaerabi.com/image/202101/227/157b90a2.jpg" ],
+        ["cell": "large", "title": "内装", "src": "https://img0.kurumaerabi.com/image/202101/220/78ec5cf9.jpg" ],
+        ["cell": "large", "title": "エンジン", "src": "https://img0.kurumaerabi.com/image/202101/226/c9eccb0e.jpg" ],
         ["cell": "cell", "title": "", "src": "" ], //empty cell
-        ["cell": "small", "title": "写真6枚目", "src": "" ],
-        ["cell": "small", "title": "写真7枚目", "src": ""],
-        ["cell": "small", "title": "写真8枚目", "src": ""],
-        ["cell": "small", "title": "写真9枚目", "src": ""],
-        ["cell": "small", "title": "写真10枚目", "src": ""],
+        ["cell": "small", "title": "写真6枚目", "src": "https://img0.kurumaerabi.com/image/202101/220/1c411183.jpg" ],
+        ["cell": "small", "title": "写真7枚目", "src": "https://img1.kurumaerabi.com/image/202101/227/e0790ba9.jpg"],
+        ["cell": "small", "title": "写真8枚目", "src": "https://img1.kurumaerabi.com/image/202101/227/e4f1f0d4.jpg"],
+        ["cell": "small", "title": "写真9枚目", "src": "https://img1.kurumaerabi.com/image/202101/224/ea727eb9.jpg"],
+        ["cell": "small", "title": "写真10枚目", "src": "https://img1.kurumaerabi.com/image/202101/223/2af9e2fe.jpg"],
         ["cell": "small", "title": "写真11枚目", "src": ""],
         ["cell": "small", "title": "写真12枚目", "src": ""],
         ["cell": "small", "title": "写真13枚目", "src": ""],

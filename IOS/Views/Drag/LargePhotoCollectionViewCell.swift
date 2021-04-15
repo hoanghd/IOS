@@ -1,10 +1,21 @@
 import UIKit
+import Alamofire
 
 class LargePhotoCollectionViewCell: PhotoCollectionViewCell{
     override var row:[String: String]? {
         didSet {
             guard let row = row else { return }
+            
             title.text = row["title"]
+            imageView.image = UIImage(named:"NoImage")
+            
+            if let src = row["src"] {
+                AF.request(src, method: .get).responseImage { response in
+                    if case .success(let image) = response.result {
+                        self.imageView.image = image
+                    }
+                }
+            }
         }
     }
     

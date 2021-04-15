@@ -7,5 +7,6 @@ target 'IOS' do
 
   # Pods for IOS
   pod 'Alamofire', '~> 5.4'
+  pod 'AlamofireImage', '~> 4.2'
   
 end
