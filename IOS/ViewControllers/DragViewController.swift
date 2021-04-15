@@ -103,7 +103,7 @@ extension DragViewController: UICollectionViewDragDelegate{
     func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
         let row = rows[ indexPath.row ]
         
-        if( row["src"] == "" || row["title"] == ""){
+        if( row["src"] == "" || row["title"] == "" ){
             return []
         }
         
