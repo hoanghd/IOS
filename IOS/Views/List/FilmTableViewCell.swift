@@ -1,18 +1,12 @@
 
 import UIKit
 
-class ContactTableViewCell: UITableViewCell {
-    var name:String? {
+class FilmTableViewCell: UITableViewCell {
+    var row: Film? {
         didSet {
-            guard let text = name else {return}
-            nameLabel.text = text
-        }
-    }
-    
-    var tel:String? {
-        didSet {
-            guard let text = tel else {return}
-            telLabel.text = text
+            guard let row = row else {return}
+            nameLabel.text = row.title
+            subtitle.text = "Episode \(String(row.id))"
         }
     }
     
@@ -31,7 +25,7 @@ class ContactTableViewCell: UITableViewCell {
         return label
     }()
     
-    lazy var telLabel:UILabel = {
+    lazy var subtitle:UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textColor = .black
@@ -42,7 +36,7 @@ class ContactTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        containerView.addSubviews( nameLabel, telLabel )
+        containerView.addSubviews( nameLabel, subtitle )
         contentView.addSubviews( containerView )
         
         NSLayoutConstraint.visual(
@@ -51,12 +45,12 @@ class ContactTableViewCell: UITableViewCell {
                 "V:|[containerView]|": [],
                 
                 "V:|-[nameLabel]-|": [],
-                "V:|-[telLabel]-|": [],
-                "H:|-[nameLabel]-[telLabel]-|": [],
+                "V:|-[subtitle]-|": [],
+                "H:|-[nameLabel]-[subtitle]-|": [],
             ],
             [
-                "telLabel": telLabel,
                 "nameLabel": nameLabel,
+                "subtitle": subtitle,
                 "containerView": containerView
             ],
             nil

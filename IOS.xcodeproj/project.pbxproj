@@ -16,7 +16,7 @@
 		C740710A26268A92006C93CA /* UpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740710926268A92006C93CA /* UpViewController.swift */; };
 		C740710E2626C2F6006C93CA /* MpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740710D2626C2F5006C93CA /* MpViewController.swift */; };
 		C74071202626DE8E006C93CA /* DragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740711F2626DE8E006C93CA /* DragViewController.swift */; };
-		C7802E1A2625825D00518F39 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802E192625825D00518F39 /* ContactTableViewCell.swift */; };
+		C7802E1A2625825D00518F39 /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802E192625825D00518F39 /* FilmTableViewCell.swift */; };
 		C78425DB2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DA2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift */; };
 		C78425DE2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DD2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift */; };
 		C78425E72627E5F30007B9C7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425E62627E5F30007B9C7 /* PhotoCollectionViewCell.swift */; };
@@ -28,6 +28,8 @@
 		C7F5EEE726291BB1001D5DD6 /* UICollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EEE626291BB1001D5DD6 /* UICollectionViewCellDelegate.swift */; };
 		C7F5EEEF262929D8001D5DD6 /* AssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EEEE262929D8001D5DD6 /* AssociatedObject.swift */; };
 		C7F5EF0826297203001D5DD6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EF0726297203001D5DD6 /* MainViewController.swift */; };
+		C7F5EF1F262994CE001D5DD6 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EF1E262994CE001D5DD6 /* Film.swift */; };
+		C7F5EF2626299580001D5DD6 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EF2526299580001D5DD6 /* Films.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +46,7 @@
 		C740710926268A92006C93CA /* UpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpViewController.swift; sourceTree = "<group>"; };
 		C740710D2626C2F5006C93CA /* MpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MpViewController.swift; sourceTree = "<group>"; };
 		C740711F2626DE8E006C93CA /* DragViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragViewController.swift; sourceTree = "<group>"; };
-		C7802E192625825D00518F39 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		C7802E192625825D00518F39 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
 		C78425DA2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargePhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		C78425DD2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		C78425E62627E5F30007B9C7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -56,6 +58,8 @@
 		C7F5EEE626291BB1001D5DD6 /* UICollectionViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellDelegate.swift; sourceTree = "<group>"; };
 		C7F5EEEE262929D8001D5DD6 /* AssociatedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedObject.swift; sourceTree = "<group>"; };
 		C7F5EF0726297203001D5DD6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C7F5EF1E262994CE001D5DD6 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		C7F5EF2526299580001D5DD6 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
 		F29FE9DC342174D5E7EB300E /* Pods_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +96,7 @@
 		C71BBFAC25F885D2009845CC /* IOS */ = {
 			isa = PBXGroup;
 			children = (
+				C7F5EF1D26299472001D5DD6 /* Model */,
 				C7802E182625824C00518F39 /* Views */,
 				C7913ED725F9A96500D2D6D5 /* Extensions */,
 				C71BBFC225F88634009845CC /* ViewControllers */,
@@ -139,7 +144,7 @@
 		C78425E12627E4F10007B9C7 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				C7802E192625825D00518F39 /* ContactTableViewCell.swift */,
+				C7802E192625825D00518F39 /* FilmTableViewCell.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -155,6 +160,31 @@
 				C7F5EEEE262929D8001D5DD6 /* AssociatedObject.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C7F5EF1D26299472001D5DD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7F5EF2326299569001D5DD6 /* Table */,
+				C7F5EF2226299553001D5DD6 /* Entity */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7F5EF2226299553001D5DD6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C7F5EF1E262994CE001D5DD6 /* Film.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C7F5EF2326299569001D5DD6 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				C7F5EF2526299580001D5DD6 /* Films.swift */,
+			);
+			path = Table;
 			sourceTree = "<group>";
 		};
 		C92B887FC5ABCB5324C5EAF0 /* Frameworks */ = {
@@ -289,13 +319,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C71BBFC425F8865D009845CC /* BaseViewController.swift in Sources */,
+				C7F5EF2626299580001D5DD6 /* Films.swift in Sources */,
 				C7F5EEE726291BB1001D5DD6 /* UICollectionViewCellDelegate.swift in Sources */,
 				C78425E72627E5F30007B9C7 /* PhotoCollectionViewCell.swift in Sources */,
 				C71BBFAE25F885D2009845CC /* AppDelegate.swift in Sources */,
 				C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraint.swift in Sources */,
 				C78425DE2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift in Sources */,
 				C7F5EEEF262929D8001D5DD6 /* AssociatedObject.swift in Sources */,
-				C7802E1A2625825D00518F39 /* ContactTableViewCell.swift in Sources */,
+				C7802E1A2625825D00518F39 /* FilmTableViewCell.swift in Sources */,
 				C78425FA262839E00007B9C7 /* UINavigationController.swift in Sources */,
 				C7913ED925F9A97F00D2D6D5 /* UIView.swift in Sources */,
 				C740710A26268A92006C93CA /* UpViewController.swift in Sources */,
@@ -305,6 +336,7 @@
 				C78425EA2627F6650007B9C7 /* CALayer.swift in Sources */,
 				C74071202626DE8E006C93CA /* DragViewController.swift in Sources */,
 				C7C93EAD26256E7000C2C958 /* ListViewController.swift in Sources */,
+				C7F5EF1F262994CE001D5DD6 /* Film.swift in Sources */,
 				C7F5EF0826297203001D5DD6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
