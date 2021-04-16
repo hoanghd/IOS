@@ -50,6 +50,9 @@ class MpViewController: BaseViewController {
     }
     
     override func layout() {
+        tabBarController?.navigationItem.title = "Upload Multiple Files"
+        tabBarController?.navigationItem.rightBarButtonItems = []
+        
         safeView.addSubviews( uploadButton )
         
         NSLayoutConstraint.activate([

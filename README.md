@@ -9,3 +9,13 @@ extension UICollectionView {
      }
 }
 ~~~
+
+# UIBarButtonItem
+~~~
+	barButtonSystemItem: .trash
+
+	image: UIImage(named: "Back")
+
+	title: "編集"
+    style: .plain
+~~~

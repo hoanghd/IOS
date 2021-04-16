@@ -34,6 +34,15 @@ class ListViewController: BaseViewController {
     }()
     
     override func layout() {
+        tabBarController?.navigationItem.title = "車両画像"
+        tabBarController?.navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(
+                barButtonSystemItem: .camera,
+                target: nil,
+                action: nil
+            )
+        ]
+        
         self.safeView.addSubviews( tableView )
         
         NSLayoutConstraint.visual(

@@ -48,6 +48,9 @@ class UpViewController: BaseViewController {
     }
     
     override func layout() {
+        tabBarController?.navigationItem.title = "Upload"
+        tabBarController?.navigationItem.rightBarButtonItems = []
+        
         safeView.addSubviews( uploadButton )
         
         NSLayoutConstraint.activate([

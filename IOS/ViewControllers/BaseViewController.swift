@@ -23,9 +23,14 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         self.edgesForExtendedLayout = []
         self.view.addSubviews( self.safeView )
+        //self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
         NSLayoutConstraint.activate([
             self.safeView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
@@ -35,11 +40,6 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         ])
         
         self.layout()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewDidAppear(_ animated: Bool) {

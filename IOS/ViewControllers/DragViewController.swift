@@ -54,7 +54,21 @@ class DragViewController: BaseViewController {
     }()
     
     override func layout() {
-        navigationItem.title = "車両画像"
+        tabBarController?.navigationItem.title = "車両画像"
+        tabBarController?.navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(
+                title: "追加",
+                style: .plain,
+                target: nil,
+                action: nil
+            ),
+            UIBarButtonItem(
+                title: "編集",
+                style: .plain,
+                target: nil,
+                action: nil
+            )
+        ]
         
         safeView.addSubviews( collectionView )
         

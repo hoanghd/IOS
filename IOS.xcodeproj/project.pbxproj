@@ -27,6 +27,7 @@
 		C7C93EAD26256E7000C2C958 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C93EAC26256E7000C2C958 /* ListViewController.swift */; };
 		C7F5EEE726291BB1001D5DD6 /* UICollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EEE626291BB1001D5DD6 /* UICollectionViewCellDelegate.swift */; };
 		C7F5EEEF262929D8001D5DD6 /* AssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EEEE262929D8001D5DD6 /* AssociatedObject.swift */; };
+		C7F5EF0826297203001D5DD6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EF0726297203001D5DD6 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		C7C93EAC26256E7000C2C958 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C7F5EEE626291BB1001D5DD6 /* UICollectionViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellDelegate.swift; sourceTree = "<group>"; };
 		C7F5EEEE262929D8001D5DD6 /* AssociatedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedObject.swift; sourceTree = "<group>"; };
+		C7F5EF0726297203001D5DD6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F29FE9DC342174D5E7EB300E /* Pods_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 		C71BBFC225F88634009845CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C7F5EF0726297203001D5DD6 /* MainViewController.swift */,
 				C71BBFC325F8865D009845CC /* BaseViewController.swift */,
 				C71BBFC825F88750009845CC /* VFLViewController.swift */,
 				C7C93EAC26256E7000C2C958 /* ListViewController.swift */,
@@ -302,6 +305,7 @@
 				C78425EA2627F6650007B9C7 /* CALayer.swift in Sources */,
 				C74071202626DE8E006C93CA /* DragViewController.swift in Sources */,
 				C7C93EAD26256E7000C2C958 /* ListViewController.swift in Sources */,
+				C7F5EF0826297203001D5DD6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
