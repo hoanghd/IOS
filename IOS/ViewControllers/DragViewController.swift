@@ -79,8 +79,12 @@ extension DragViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let row = rows[ indexPath.row ]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: row["cell"]!, for: indexPath) as! PhotoCollectionViewCell
+        
         cell.backgroundColor = .white
-        cell.row = row
+        cell.delegate   = self
+        cell.index      = indexPath
+        cell.row        = row
+        
         return cell
     }
 }
@@ -144,5 +148,12 @@ extension DragViewController: UICollectionViewDropDelegate{
                 collectionView.reloadData()
             }
         }
+    }
+}
+
+extension DragViewController: UICollectionViewCellDelegate{
+    func collectionViewCell(_ collectionViewCell: UICollectionViewCell, _ indexPath: IndexPath?, _ data: [String : Any]?) {
+        guard let index = indexPath?.row else { return }
+        rows[ index ]["src"] = ""
     }
 }

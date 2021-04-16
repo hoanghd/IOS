@@ -47,6 +47,7 @@ class LargePhotoCollectionViewCell: PhotoCollectionViewCell{
     
     @objc func removeImage() {
         imageView.image = UIImage(named:"NoImage")
+        delegate?.collectionViewCell(self, index, nil)
     }
     
     override init(frame: CGRect) {
