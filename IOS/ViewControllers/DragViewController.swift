@@ -154,6 +154,8 @@ extension DragViewController: UICollectionViewDropDelegate{
 extension DragViewController: UICollectionViewCellDelegate{
     func collectionViewCell(_ collectionViewCell: UICollectionViewCell, _ indexPath: IndexPath?, _ data: [String : Any]?) {
         guard let index = indexPath?.row else { return }
+        guard rows.indices.contains(index) else { return }
+        
         rows[ index ]["src"] = ""
     }
 }
