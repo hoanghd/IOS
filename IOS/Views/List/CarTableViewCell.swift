@@ -82,10 +82,67 @@ class CarTableViewCell: UITableViewCell {
         return label
     }()
     
+    lazy var inventoryButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("在庫情報", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
+        
+        button.layer.borderWidth  = 1
+        button.layer.borderColor  = UIColor.gray.cgColor
+        
+        button.layer.backgroundColor = UIColor(red: 253, green: 251, blue: 218).cgColor
+        return button
+    }()
+    
+    lazy var quoteButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("見積依頼", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
+        
+        button.layer.borderWidth  = 1
+        button.layer.borderColor  = UIColor.gray.cgColor
+        
+        button.layer.backgroundColor = UIColor(red: 253, green: 251, blue: 218).cgColor
+        return button
+    }()
+    
+    lazy var inExButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("内外装", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
+        
+        button.layer.borderWidth  = 1
+        button.layer.borderColor  = UIColor.gray.cgColor
+        
+        button.layer.backgroundColor = UIColor(red: 253, green: 251, blue: 218).cgColor
+        return button
+    }()
+    
+    lazy var loanButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("ローン金利", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
+        
+        button.layer.borderWidth  = 1
+        button.layer.borderColor  = UIColor.gray.cgColor
+        
+        button.layer.backgroundColor = UIColor(red: 253, green: 251, blue: 218).cgColor
+        return button
+    }()
+    
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        containerView.addSubviews( dateLabel, codeLablel, nameLablel, agoLablel, imageCar, infoLablel )
+        containerView.addSubviews( dateLabel, codeLablel, nameLablel, agoLablel, imageCar, infoLablel, inventoryButton, quoteButton, inExButton, loanButton )
         contentView.addSubviews( containerView )
         
         NSLayoutConstraint.activate([
@@ -104,15 +161,21 @@ class CarTableViewCell: UITableViewCell {
                 "H:|-[dateLabel]": [],
                 "H:|-[nameLablel]": [],
                 "H:|-[imageCar]-[infoLablel]-|": [ .alignAllCenterY ],
-                "V:|-[dateLabel]-[nameLablel]-[imageCar(==40)]-|": []
+                "H:|-[inventoryButton]-[quoteButton(==inventoryButton)]-[inExButton(==inventoryButton)]-|": [ .alignAllCenterY  ],
+                "H:|-[loanButton(==inventoryButton)]": [],
+                "V:|-[dateLabel]-[nameLablel]-[imageCar(==40)]-[inventoryButton]-[loanButton]-|": []
             ],
             [
-                "dateLabel": dateLabel,
-                "codeLablel": codeLablel,
-                "nameLablel": nameLablel,
-                "agoLablel": agoLablel,
-                "imageCar": imageCar,
-                "infoLablel": infoLablel,
+                "dateLabel":        dateLabel,
+                "codeLablel":       codeLablel,
+                "nameLablel":       nameLablel,
+                "agoLablel":        agoLablel,
+                "imageCar":         imageCar,
+                "infoLablel":       infoLablel,
+                "inventoryButton":  inventoryButton,
+                "quoteButton":      quoteButton,
+                "inExButton":       inExButton,
+                "loanButton":       loanButton,
                 "containerView": containerView
             ],
             nil

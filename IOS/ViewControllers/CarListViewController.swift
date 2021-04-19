@@ -1,7 +1,7 @@
 import UIKit
 import Alamofire
 
-class ListViewController: BaseViewController {
+class CarListViewController: BaseViewController {
     var rows: [Car] = []
     
     lazy var tableView: UITableView = {
@@ -46,7 +46,7 @@ class ListViewController: BaseViewController {
     }
 }
 
-extension ListViewController: UITableViewDelegate, UITableViewDataSource{
+extension CarListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rows.count
     }

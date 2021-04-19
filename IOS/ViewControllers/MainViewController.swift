@@ -16,8 +16,8 @@ class MainViewController: UITabBarController {
         return drag
     }()
     
-    lazy var list: ListViewController = {
-        let list = ListViewController()
+    lazy var list: CarListViewController = {
+        let list = CarListViewController()
         
         let barItem = UITabBarItem(
             tabBarSystemItem: .downloads,
