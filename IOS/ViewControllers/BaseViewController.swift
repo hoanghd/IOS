@@ -30,7 +30,6 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         
         self.edgesForExtendedLayout = []
         self.view.addSubviews( self.safeView )
-        //self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
         NSLayoutConstraint.activate([
             self.safeView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
