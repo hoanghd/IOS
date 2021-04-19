@@ -50,7 +50,8 @@ class CarListViewController: BaseViewController {
         NSLayoutConstraint.visual(
             [
                 "H:|[tableView]|": [],
-                "V:|-20-[segmented]-20-[tableView]|": [ .alignAllCenterX ]
+                "H:|-[segmented]-|": [],
+                "V:|-20-[segmented]-20-[tableView]|": []
             ],
             [
                 "segmented": segmented,
