@@ -39,19 +39,10 @@ class ListViewController: BaseViewController {
             nil
         )
         
-        fetchFilms()
-    }
-    
-    func fetchFilms(){
-        rows = []
-        AF.request("https://swapi.dev/api/films")
-          .validate()
-          .responseDecodable(of: Films.self) { (response) in
-            guard let films = response.value else { return }
-            
-            self.rows = films.all
+        FilmsApi.get{ (rows) in
+            self.rows = rows
             self.tableView.reloadData()
-          }
+        }
     }
 }
 
