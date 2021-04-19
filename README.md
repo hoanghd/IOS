@@ -19,9 +19,3 @@ extension UICollectionView {
 	title: "編集"
     style: .plain
 ~~~
-
-# Core Data
-~~~
-https://www.raywenderlich.com/6587213-alamofire-5-tutorial-for-ios-getting-started
-https://swapi.dev/api/films/
-~~~

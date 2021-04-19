@@ -2,12 +2,12 @@ import UIKit
 import Alamofire
 
 class ListViewController: BaseViewController {
-    var rows: [Film] = []
+    var rows: [Car] = []
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         
-        tableView.register(FilmTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(CarTableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.isScrollEnabled = true
         tableView.dataSource = self
@@ -39,7 +39,7 @@ class ListViewController: BaseViewController {
             nil
         )
         
-        FilmsApi.get(1, {(rows) in
+        CarListApi.get(1, {(rows) in
             self.rows = rows
             self.tableView.reloadData()
         })
@@ -52,7 +52,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:FilmTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FilmTableViewCell
+        let cell:CarTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarTableViewCell
         cell.accessoryType = .disclosureIndicator
         cell.row = rows[indexPath.row]
         return cell
