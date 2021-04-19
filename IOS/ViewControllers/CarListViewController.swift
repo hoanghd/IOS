@@ -4,6 +4,16 @@ import Alamofire
 class CarListViewController: BaseViewController {
     var rows: [Car] = []
     
+    lazy var segmented: UISegmentedControl = {
+        let segmented = UISegmentedControl(items: ["未回答 (5)", "回答済", "返信あり (2)"])
+        segmented.translatesAutoresizingMaskIntoConstraints = false
+        segmented.selectedSegmentIndex = 0
+        
+        segmented.addTarget(self, action:#selector(segmentedValueChanged(_:)), for: .valueChanged)
+        
+        return segmented
+    }()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         
@@ -21,6 +31,10 @@ class CarListViewController: BaseViewController {
         return tableView
     }()
     
+    @objc func segmentedValueChanged(_ sender:UISegmentedControl!) {
+        print("Selected Segment Index is : \(sender.selectedSegmentIndex)")
+    }
+    
     override func layout() {
         tabBarController?.navigationItem.title = "車両画像"
         tabBarController?.navigationItem.rightBarButtonItems = [
@@ -31,14 +45,15 @@ class CarListViewController: BaseViewController {
             )
         ]
         
-        self.safeView.addSubviews( tableView )
+        self.safeView.addSubviews( segmented, tableView )
         
         NSLayoutConstraint.visual(
             [
                 "H:|[tableView]|": [],
-                "V:|[tableView]|": []
+                "V:|-20-[segmented]-20-[tableView]|": [ .alignAllCenterX ]
             ],
             [
+                "segmented": segmented,
                 "tableView": tableView
             ],
             nil
