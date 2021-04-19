@@ -3,7 +3,7 @@ import UIKit
 import PhotosUI
 import Alamofire
 
-class MpViewController: BaseViewController {
+class MultipleUploadViewController: BaseViewController {
     lazy var uploadButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -63,7 +63,7 @@ class MpViewController: BaseViewController {
     }
 }
 
-extension MpViewController: PHPickerViewControllerDelegate {
+extension MultipleUploadViewController: PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true)
         

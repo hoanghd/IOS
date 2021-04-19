@@ -3,7 +3,7 @@ import UIKit
 import Photos
 import Alamofire
 
-class UpViewController: BaseViewController {
+class UploadViewController: BaseViewController {
     lazy var uploadButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -61,7 +61,7 @@ class UpViewController: BaseViewController {
     }
 }
 
-extension UpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+extension UploadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let imageUrl = info[.imageURL]{
             let parameters: Parameters = [

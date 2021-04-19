@@ -6,8 +6,8 @@ class MainViewController: UITabBarController {
         let drag = DragViewController()
         
         let barItem = UITabBarItem(
-            title: "Notify",
-            image: UIImage(named: "Noti"),
+            title: "Drag",
+            image: UIImage(named: "Drag"),
             tag: 1
         )
         
@@ -20,7 +20,8 @@ class MainViewController: UITabBarController {
         let list = CarListViewController()
         
         let barItem = UITabBarItem(
-            tabBarSystemItem: .downloads,
+            title: "List",
+            image: UIImage(named: "List"),
             tag: 2
         )
         
@@ -29,12 +30,13 @@ class MainViewController: UITabBarController {
         return list
     }()
     
-    lazy var up: UpViewController = {
-        let list = UpViewController()
+    lazy var upload: UploadViewController = {
+        let list = UploadViewController()
         
         let barItem = UITabBarItem(
-            tabBarSystemItem: .contacts,
-            tag: 2
+            title: "Upload",
+            image: UIImage(named: "Upload"),
+            tag: 3
         )
         
         list.tabBarItem = barItem
@@ -42,12 +44,12 @@ class MainViewController: UITabBarController {
         return list
     }()
     
-    lazy var mp: MpViewController = {
-        let list = MpViewController()
+    lazy var multipleUpload: MultipleUploadViewController = {
+        let list = MultipleUploadViewController()
         
         let barItem = UITabBarItem(
             tabBarSystemItem: .bookmarks,
-            tag: 2
+            tag: 4
         )
         
         list.tabBarItem = barItem
@@ -57,6 +59,6 @@ class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewControllers = [drag, list, up, mp]
+        self.viewControllers = [drag, list, upload, multipleUpload]
     }
 }
