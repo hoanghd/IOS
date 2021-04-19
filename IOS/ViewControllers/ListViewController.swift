@@ -39,10 +39,10 @@ class ListViewController: BaseViewController {
             nil
         )
         
-        FilmsApi.get{ (rows) in
+        FilmsApi.get(1, {(rows) in
             self.rows = rows
             self.tableView.reloadData()
-        }
+        })
     }
 }
 

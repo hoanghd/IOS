@@ -9,7 +9,7 @@ struct FilmsApi: Decodable {
         case rows = "results"
     }
     
-    static func get( completion: @escaping([Film])->() ){
+    static func get( _ id: Int, _ completion: @escaping([Film])->() ){
         AF.request("https://swapi.dev/api/films")
           .validate()
           .responseDecodable(of: self) { (response) in
