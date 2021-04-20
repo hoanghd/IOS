@@ -6,7 +6,6 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     lazy var safeView: UIView = {
         let safeView = UIView()
-        safeView.translatesAutoresizingMaskIntoConstraints = false
         safeView.clipsToBounds = true
         return safeView
     }()
@@ -21,12 +20,8 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func layout(){}
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func loadView() {
+        super.loadView()
         
         self.edgesForExtendedLayout = []
         self.view.addSubviews( self.safeView )
@@ -39,6 +34,14 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         ])
         
         self.layout()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     override func viewDidAppear(_ animated: Bool) {

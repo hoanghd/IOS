@@ -21,7 +21,6 @@ class LargePhotoCollectionViewCell: PhotoCollectionViewCell{
     
     lazy var imageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named:"NoImage"))
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.borderColor = UIColor.gray.cgColor
         imageView.contentMode = .scaleAspectFit
         imageView.layer.borderWidth = 1
@@ -33,13 +32,11 @@ class LargePhotoCollectionViewCell: PhotoCollectionViewCell{
         let title = UILabel()
         title.textColor = .black
         title.font = UIFont.systemFont(ofSize: 12.0)
-        title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
     
     lazy var button: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "Delete"), for: .normal)
         button.addTarget(self, action:#selector(removeImage), for: .touchUpInside)
         return button

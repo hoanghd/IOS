@@ -6,7 +6,6 @@ class CarListViewController: BaseViewController {
     
     lazy var segmented: UISegmentedControl = {
         let segmented = UISegmentedControl(items: ["未回答 (5)", "回答済", "返信あり (2)"])
-        segmented.translatesAutoresizingMaskIntoConstraints = false
         segmented.selectedSegmentIndex = 0
         
         segmented.addTarget(self, action:#selector(segmentedValueChanged(_:)), for: .valueChanged)
@@ -16,9 +15,7 @@ class CarListViewController: BaseViewController {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
-        
         tableView.register(CarTableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         
         tableView.separatorColor = .gray
         tableView.separatorStyle = .singleLine

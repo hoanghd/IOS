@@ -4,7 +4,6 @@ import UIKit
 class VFLViewController: BaseViewController {
     let button1_1: UIButton = {
         var button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "Camera")?.withRenderingMode(.alwaysTemplate), for: .normal)
         button.setTitleColor(.blue, for: .highlighted)
         button.backgroundColor = .blue
@@ -13,7 +12,6 @@ class VFLViewController: BaseViewController {
     
     let button1_2: UIButton = {
         var button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Cancel1", for: .normal)
         button.setTitleColor(.blue, for: .highlighted)
         button.backgroundColor = .blue
@@ -22,7 +20,6 @@ class VFLViewController: BaseViewController {
     
     let button2_1: UIButton = {
         var button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Send2", for: .normal)
         button.setTitleColor(.blue, for: .highlighted)
         button.backgroundColor = .blue
@@ -31,7 +28,6 @@ class VFLViewController: BaseViewController {
     
     let button2_2: UIButton = {
         var button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Cancel2", for: .normal)
         button.setTitleColor(.blue, for: .highlighted)
         button.backgroundColor = .blue

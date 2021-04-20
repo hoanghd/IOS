@@ -6,7 +6,6 @@ import Alamofire
 class MultipleUploadViewController: BaseViewController {
     lazy var uploadButton: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Upload", for: .normal)
         button.setTitleColor(.blue, for: .normal)
         

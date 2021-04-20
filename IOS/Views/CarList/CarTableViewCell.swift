@@ -26,7 +26,6 @@ class CarTableViewCell: UITableViewCell {
     
     lazy var containerView:UIView = {
         let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
         return view
     }()
@@ -35,7 +34,6 @@ class CarTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 12)
         label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -43,7 +41,6 @@ class CarTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 12)
         label.textColor = .gray
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -51,7 +48,6 @@ class CarTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -59,13 +55,11 @@ class CarTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     lazy var imageCar: UIImageView = {
         let imageView = UIImageView(image: UIImage(named:"NoImage"))
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.borderColor = UIColor.gray.cgColor
         imageView.contentMode = .scaleAspectFit
         imageView.layer.borderWidth = 1
@@ -78,13 +72,11 @@ class CarTableViewCell: UITableViewCell {
         label.font = UIFont.boldSystemFont(ofSize: 12)
         label.textColor = .gray
         label.numberOfLines = 2
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     lazy var inventoryButton: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("在庫情報", for: .normal)
         button.setTitleColor(.gray, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
@@ -98,7 +90,6 @@ class CarTableViewCell: UITableViewCell {
     
     lazy var quoteButton: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("見積依頼", for: .normal)
         button.setTitleColor(.gray, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
@@ -112,7 +103,6 @@ class CarTableViewCell: UITableViewCell {
     
     lazy var inExButton: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("内外装", for: .normal)
         button.setTitleColor(.gray, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
@@ -126,7 +116,6 @@ class CarTableViewCell: UITableViewCell {
     
     lazy var loanButton: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("ローン金利", for: .normal)
         button.setTitleColor(.gray, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
