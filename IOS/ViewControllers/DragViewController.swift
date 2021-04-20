@@ -54,8 +54,8 @@ class DragViewController: BaseViewController {
     }()
     
     override func layout() {
-        tabBarController?.navigationItem.title = "車両画像"
-        tabBarController?.navigationItem.rightBarButtonItems = [
+        navigationItem.title = "車両画像"
+        navigationItem.rightBarButtonItems = [
             UIBarButtonItem(
                 title: "追加",
                 style: .plain,

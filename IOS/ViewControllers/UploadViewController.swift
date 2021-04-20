@@ -48,8 +48,8 @@ class UploadViewController: BaseViewController {
     }
     
     override func layout() {
-        tabBarController?.navigationItem.title = "Upload"
-        tabBarController?.navigationItem.rightBarButtonItems = []
+        navigationItem.title = "Upload"
+        navigationItem.rightBarButtonItems = []
         
         safeView.addSubviews( uploadButton )
         

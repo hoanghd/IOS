@@ -2,8 +2,8 @@ import UIKit
 
 class MainViewController: UITabBarController {
     
-    lazy var drag: DragViewController = {
-        let drag = DragViewController()
+    lazy var drag: UINavigationController = {
+        let drag = UINavigationController(rootViewController: DragViewController())
         
         let barItem = UITabBarItem(
             title: "Drag",
@@ -16,8 +16,8 @@ class MainViewController: UITabBarController {
         return drag
     }()
     
-    lazy var list: CarListViewController = {
-        let list = CarListViewController()
+    lazy var list: UINavigationController = {
+        let list = UINavigationController(rootViewController: CarListViewController())
         
         let barItem = UITabBarItem(
             title: "List",
@@ -30,8 +30,8 @@ class MainViewController: UITabBarController {
         return list
     }()
     
-    lazy var upload: UploadViewController = {
-        let list = UploadViewController()
+    lazy var upload: UINavigationController = {
+        let list = UINavigationController(rootViewController: UploadViewController())
         
         let barItem = UITabBarItem(
             title: "Upload",
@@ -44,8 +44,8 @@ class MainViewController: UITabBarController {
         return list
     }()
     
-    lazy var multipleUpload: MultipleUploadViewController = {
-        let list = MultipleUploadViewController()
+    lazy var multipleUpload: UINavigationController = {
+        let list = UINavigationController(rootViewController: MultipleUploadViewController())
         
         let barItem = UITabBarItem(
             tabBarSystemItem: .bookmarks,

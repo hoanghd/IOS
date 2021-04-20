@@ -50,8 +50,8 @@ class MultipleUploadViewController: BaseViewController {
     }
     
     override func layout() {
-        tabBarController?.navigationItem.title = "Upload Multiple Files"
-        tabBarController?.navigationItem.rightBarButtonItems = []
+        navigationItem.title = "Upload Multiple Files"
+        navigationItem.rightBarButtonItems = []
         
         safeView.addSubviews( uploadButton )
         

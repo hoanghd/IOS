@@ -7,7 +7,7 @@ class CarTableViewCell: UITableViewCell {
             guard let row   = row else { return }
             
             dateLabel.text  = row.date
-            codeLablel.text = "問合せID:\(row.code)"
+            codeLablel.text = "問合せID : \(row.code)"
             nameLablel.text = row.name
             infoLablel.text = row.info
             

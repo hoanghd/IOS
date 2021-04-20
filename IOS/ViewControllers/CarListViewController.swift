@@ -36,8 +36,8 @@ class CarListViewController: BaseViewController {
     }
     
     override func layout() {
-        tabBarController?.navigationItem.title = "車両画像"
-        tabBarController?.navigationItem.rightBarButtonItems = [
+        navigationItem.title = "車両画像"
+        navigationItem.rightBarButtonItems = [
             UIBarButtonItem(
                 barButtonSystemItem: .camera,
                 target: nil,
@@ -80,6 +80,9 @@ extension CarListViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \(indexPath.row).")
+        let carDetail = CarDetailViewController()
+        carDetail.carId = 1
+        
+        navigationController?.pushViewController(carDetail, animated: true)
     }
 }

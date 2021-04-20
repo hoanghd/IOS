@@ -16,11 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func initRootViewController(){
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let mainViewController = MainViewController()
-        let navigationController = UINavigationController(rootViewController: mainViewController)
-        
         self.window?.backgroundColor = UIColor.white
-        self.window?.rootViewController = navigationController
+        self.window?.rootViewController = MainViewController()
         
         self.window?.makeKeyAndVisible()
     }
