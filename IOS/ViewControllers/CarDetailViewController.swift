@@ -24,29 +24,43 @@ class CarDetailViewController: BaseViewController {
     
     lazy var chatList: CarDetailChatView = {
         let view = CarDetailChatView(frame: .zero)
+        view.backgroundColor = .gray
+        return view
+    }()
+    
+    lazy var scrollView: UIScrollView = {
+        let view = UIScrollView()
+        view.contentSize = CGSize(width: safeView.frame.width, height: 2000)
         return view
     }()
     
     override func layout() {
         navigationItem.title = "車両画像"
         
-        safeView.addSubviews( noAnsButton, userInfo, carInfo, chatList )
+        safeView.addSubviews( scrollView )
+        scrollView.addSubviews( noAnsButton, userInfo, carInfo, chatList )
         
         NSLayoutConstraint.activate([
-            noAnsButton.centerXAnchor.constraint(equalTo: safeView.centerXAnchor),
-            noAnsButton.widthAnchor.constraint(equalToConstant: 150)
+            noAnsButton.widthAnchor.constraint(equalToConstant: 150),
+            noAnsButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            
+            userInfo.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            carInfo.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            chatList.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
         ])
         
         NSLayoutConstraint.visual(
             [
-                "V:|-[noAnsButton]-[userInfo]-|": [],
-                "H:|-[userInfo]-|": []
+                "H:|[scrollView]|": [],
+                "V:|[scrollView]|": [],
+                "V:|-[noAnsButton]-[userInfo]-[carInfo]-[chatList]": []
             ],
             [
                 "noAnsButton": noAnsButton,
                 "userInfo": userInfo,
-                "carInfo":  carInfo,
-                "chatList": chatList
+                "carInfo": carInfo,
+                "chatList": chatList,
+                "scrollView": scrollView
             ],
             nil
         )

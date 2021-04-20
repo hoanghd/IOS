@@ -118,13 +118,13 @@ class CarDetailUserView: UIView{
         NSLayoutConstraint.visual(
             [
                 "H:|-[avatar(==50)]": [],
-                "V:|-[codeLablel]-[nameLablel]-[addrLablel]": [ .alignAllCenterX ],
                 "H:[typeLablel]-|": [],
                 "H:|-[inventoryButton]-[quoteButton(==inventoryButton)]-[inExButton(==inventoryButton)]-|": [ .alignAllCenterY  ],
                 "H:|-[loanButton(==inventoryButton)]": [],
                 "H:|-[reportLablel]": [],
-                "H:|[border]|": [],
-                "V:|-[codeLablel]-[nameLablel]-[addrLablel]-12-[inventoryButton]-[loanButton]-16-[reportLablel]-16-[border(==1)]": []
+                "H:|-[border]-|": [],
+                "V:|-[codeLablel]-[nameLablel]-[addrLablel]": [ .alignAllCenterX ],
+                "V:|-[codeLablel]-[nameLablel]-[addrLablel]-12-[inventoryButton]-[loanButton]-16-[reportLablel]-16-[border(==1)]|": []
             ],
             [
                 "avatar": avatar,
