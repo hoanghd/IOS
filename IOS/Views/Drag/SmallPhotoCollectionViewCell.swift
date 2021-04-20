@@ -44,6 +44,12 @@ class SmallPhotoCollectionViewCell: PhotoCollectionViewCell{
         return button
     }()
     
+    lazy var border: UIView = {
+        let view = UIView()
+        view.backgroundColor = .gray
+        return view
+    }()
+    
     @objc func removeImage() {
         imageView.image = UIImage(named:"NoImage")
         delegate?.collectionViewCell(self, index, nil)
@@ -52,8 +58,7 @@ class SmallPhotoCollectionViewCell: PhotoCollectionViewCell{
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        addSubviews(imageView, button, title)
-        layer.addBorder(edge: .bottom, color: .gray, thickness: 1)
+        addSubviews(imageView, button, title, border)
         
         NSLayoutConstraint.activate([
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor),
@@ -64,10 +69,12 @@ class SmallPhotoCollectionViewCell: PhotoCollectionViewCell{
         NSLayoutConstraint.visual(
             [
                 "H:|[imageView]-[title]|": [ .alignAllCenterY ],
-                "V:|-[imageView]-|": []
+                "H:|[border]|": [],
+                "V:|-[imageView]-[border(==1)]|": []
             ],
             [
                 "title": title,
+                "border": border,
                 "imageView": imageView
             ],
             nil

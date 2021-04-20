@@ -25,8 +25,6 @@
 		C78425DB2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DA2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift */; };
 		C78425DE2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DD2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift */; };
 		C78425E72627E5F30007B9C7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425E62627E5F30007B9C7 /* PhotoCollectionViewCell.swift */; };
-		C78425EA2627F6650007B9C7 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425E92627F6650007B9C7 /* CALayer.swift */; };
-		C78425FA262839E00007B9C7 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425F9262839E00007B9C7 /* UINavigationController.swift */; };
 		C7913ED925F9A97F00D2D6D5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913ED825F9A97F00D2D6D5 /* UIView.swift */; };
 		C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraint.swift */; };
 		C7C93EAD26256E7000C2C958 /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C93EAC26256E7000C2C958 /* CarListViewController.swift */; };
@@ -60,8 +58,6 @@
 		C78425DA2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargePhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		C78425DD2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		C78425E62627E5F30007B9C7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		C78425E92627F6650007B9C7 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
-		C78425F9262839E00007B9C7 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		C7913ED825F9A97F00D2D6D5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		C7C93EAC26256E7000C2C958 /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
@@ -177,8 +173,6 @@
 				C7F5EEE626291BB1001D5DD6 /* UICollectionViewCellDelegate.swift */,
 				C7913ED825F9A97F00D2D6D5 /* UIView.swift */,
 				C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraint.swift */,
-				C78425E92627F6650007B9C7 /* CALayer.swift */,
-				C78425F9262839E00007B9C7 /* UINavigationController.swift */,
 				C7F5EEEE262929D8001D5DD6 /* AssociatedObject.swift */,
 				C73AD777262D68A100C35EEC /* UIColor.swift */,
 			);
@@ -355,13 +349,11 @@
 				C7F5EEEF262929D8001D5DD6 /* AssociatedObject.swift in Sources */,
 				C759FB7D262E867700B45F7D /* CarDetailUserView.swift in Sources */,
 				C7802E1A2625825D00518F39 /* CarTableViewCell.swift in Sources */,
-				C78425FA262839E00007B9C7 /* UINavigationController.swift in Sources */,
 				C7913ED925F9A97F00D2D6D5 /* UIView.swift in Sources */,
 				C740710A26268A92006C93CA /* UploadViewController.swift in Sources */,
 				C71BBFC925F88750009845CC /* VFLViewController.swift in Sources */,
 				C78425DB2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift in Sources */,
 				C740710E2626C2F6006C93CA /* MultipleUploadViewController.swift in Sources */,
-				C78425EA2627F6650007B9C7 /* CALayer.swift in Sources */,
 				C74071202626DE8E006C93CA /* DragViewController.swift in Sources */,
 				C7C93EAD26256E7000C2C958 /* CarListViewController.swift in Sources */,
 				C7F5EF1F262994CE001D5DD6 /* Car.swift in Sources */,

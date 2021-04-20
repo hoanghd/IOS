@@ -34,7 +34,7 @@ class CarDetailViewController: BaseViewController {
         
         NSLayoutConstraint.activate([
             noAnsButton.centerXAnchor.constraint(equalTo: safeView.centerXAnchor),
-            noAnsButton.widthAnchor.constraint(equalToConstant: 100)
+            noAnsButton.widthAnchor.constraint(equalToConstant: 150)
         ])
         
         NSLayoutConstraint.visual(
