@@ -27,35 +27,11 @@ class CarDetailBaseView: UIView{
         return button
     }()
     
-    lazy var yearLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .white
-        return label
-    }()
-    
-    lazy var colorLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .white
-        return label
-    }()
-    
-    lazy var priceLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .white
-        return label
-    }()
-    
-    lazy var mileageLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .white
-        return label
-    }()
-    
-    lazy var carNumLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .white
-        return label
-    }()
+    lazy var yearLabel: UILabel = UILabel()
+    lazy var colorLabel: UILabel = UILabel()
+    lazy var priceLabel: UILabel = UILabel()
+    lazy var mileageLabel: UILabel = UILabel()
+    lazy var carNumLabel: UILabel = UILabel()
     
     lazy var carIdLabel: UILabel = {
         let label = UILabel()
