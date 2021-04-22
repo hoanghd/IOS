@@ -24,7 +24,6 @@ class CarDetailViewController: BaseViewController {
     
     lazy var chatList: CarDetailChatView = {
         let view = CarDetailChatView(frame: .zero)
-        view.backgroundColor = .gray
         return view
     }()
     
