@@ -1,4 +1,5 @@
 import UIKit
+import Nantes
 
 class CarDetailChatView: UIView{
     lazy var dateLabel: UILabel = {
@@ -13,11 +14,15 @@ class CarDetailChatView: UIView{
         return label
     }()
     
-    lazy var messageLabel: UILabel = {
-        let label = UILabel(frame: .zero)
+    lazy var messageLabel: NantesLabel = {
+        let label = NantesLabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 14)
-        label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 10
+        
+        label.attributedTruncationToken = NSAttributedString(string: "... more")
+        label.numberOfLines = 3
+        label.labelTappedBlock = {
+            label.numberOfLines = label.numberOfLines == 0 ? 3 : 0
+        }
         
         return label
     }()
@@ -103,6 +108,10 @@ class CarDetailChatView: UIView{
         dateLabel.text = "2021.02.01"
         userLabel.text = "交響曲太郎様"
         messageLabel.text = "「この車、気になっているけれど、ちょっと予算と合わない…」\n「欲しいタイプの車が見つからなかった…」\nそんなときは、入庫お知らせメールに登録を！\n登録した条件のお車が「車選びドットコム」に入庫した際に、いち早くメールでお知らせします。"
+        
+        DispatchQueue.main.async {
+            
+        }
     }
     
     override init(frame: CGRect) {

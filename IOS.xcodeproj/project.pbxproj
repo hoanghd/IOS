@@ -21,6 +21,7 @@
 		C759FB7D262E867700B45F7D /* CarDetailUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759FB7C262E867700B45F7D /* CarDetailUserView.swift */; };
 		C759FB80262E868D00B45F7D /* CarDetailBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759FB7F262E868D00B45F7D /* CarDetailBaseView.swift */; };
 		C759FB83262E86A900B45F7D /* CarDetailChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759FB82262E86A900B45F7D /* CarDetailChatView.swift */; };
+		C76930A726317C60001FDB4F /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76930A626317C60001FDB4F /* UILabel.swift */; };
 		C7802E1A2625825D00518F39 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802E192625825D00518F39 /* CarTableViewCell.swift */; };
 		C78425DB2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DA2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift */; };
 		C78425DE2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DD2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift */; };
@@ -54,6 +55,7 @@
 		C759FB7C262E867700B45F7D /* CarDetailUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailUserView.swift; sourceTree = "<group>"; };
 		C759FB7F262E868D00B45F7D /* CarDetailBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailBaseView.swift; sourceTree = "<group>"; };
 		C759FB82262E86A900B45F7D /* CarDetailChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailChatView.swift; sourceTree = "<group>"; };
+		C76930A626317C60001FDB4F /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		C7802E192625825D00518F39 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		C78425DA2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargePhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		C78425DD2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraint.swift */,
 				C7F5EEEE262929D8001D5DD6 /* AssociatedObject.swift */,
 				C73AD777262D68A100C35EEC /* UIColor.swift */,
+				C76930A626317C60001FDB4F /* UILabel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				C74071202626DE8E006C93CA /* DragViewController.swift in Sources */,
 				C7C93EAD26256E7000C2C958 /* CarListViewController.swift in Sources */,
 				C7F5EF1F262994CE001D5DD6 /* Car.swift in Sources */,
+				C76930A726317C60001FDB4F /* UILabel.swift in Sources */,
 				C7F5EF0826297203001D5DD6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

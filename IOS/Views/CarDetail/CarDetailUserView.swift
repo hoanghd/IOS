@@ -93,6 +93,7 @@ class CarDetailUserView: UIView{
         label.font = UIFont.boldSystemFont(ofSize: 12)
         label.textColor = UIColor(red:1, green:122, blue:255)
         label.text = "この問い合わせを報告する"
+        label.underline()
         return label
     }()
     
