@@ -2,6 +2,7 @@ import UIKit
 import Alamofire
 
 class CarDetailBaseView: UIView{
+    
     lazy var imageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named:"NoImage"))
         imageView.layer.borderColor = UIColor.gray.cgColor
@@ -11,14 +12,14 @@ class CarDetailBaseView: UIView{
         return imageView
     }()
     
-    lazy var titleLablel:UILabel = {
+    lazy var titleLabel:UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 2
         return label
     }()
     
-    let openButton: UIButton = {
+    lazy var openButton: UIButton = {
         var button = UIButton()
         button.setImage(UIImage(named: "Open"), for: .normal)
         button.contentVerticalAlignment = .fill
@@ -26,8 +27,69 @@ class CarDetailBaseView: UIView{
         return button
     }()
     
+    lazy var yearLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .white
+        return label
+    }()
+    
+    lazy var colorLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .white
+        return label
+    }()
+    
+    lazy var priceLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .white
+        return label
+    }()
+    
+    lazy var mileageLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .white
+        return label
+    }()
+    
+    lazy var carNumLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .white
+        return label
+    }()
+    
+    lazy var carIdLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .white
+        return label
+    }()
+    
+    lazy var rows: [Any] = [
+        "年式", yearLabel,
+        "色", colorLabel,
+        "車両価格", priceLabel,
+        "走行", mileageLabel,
+        "車台番号", carNumLabel,
+        "車番ID", carIdLabel,
+    ]
+    
+    lazy var carInfoView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+        layout.scrollDirection = .vertical
+        layout.minimumInteritemSpacing = 1
+        layout.minimumLineSpacing = 1
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.backgroundColor = UIColor(red: 229, green: 229, blue: 229)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        return collectionView
+    }()
+    
     func layout() {
-        addSubviews( imageView, titleLablel, openButton )
+        addSubviews( imageView, titleLabel, openButton, carInfoView )
         
         NSLayoutConstraint.activate([
             openButton.widthAnchor.constraint(equalTo: openButton.heightAnchor)
@@ -35,18 +97,27 @@ class CarDetailBaseView: UIView{
         
         NSLayoutConstraint.visual(
             [
-                "H:|-[imageView(==80)]-[titleLablel]-[openButton(==23)]-|": [ .alignAllCenterY ],
-                "V:|-[imageView(==60)]-|": []
+                "H:|-[imageView(==80)]-[titleLabel]-[openButton(==23)]-|": [ .alignAllCenterY ],
+                "H:|-[carInfoView]-|": [],
+                "V:|-[imageView(==60)]-[carInfoView(==94)]-|": [],
             ],
             [
                 "imageView": imageView,
                 "openButton": openButton,
-                "titleLablel": titleLablel
+                "titleLabel": titleLabel,
+                "carInfoView": carInfoView
             ],
             nil
         )
         
-        titleLablel.text = "レクサス LS460 バージョンS Iパッケージ"
+        titleLabel.text = "レクサス LS460 バージョンS Iパッケージ"
+        yearLabel.text = "H18(2006)年"
+        colorLabel.text = "ブラック"
+        priceLabel.text = "129万円"
+        mileageLabel.text = "8.8万km"
+        carNumLabel.text = "0984567453"
+        carIdLabel.text = "12345-1234"
+        
         AF.request("https://img0.kurumaerabi.com/image/202101/058/a52874a6.160.jpg", method: .get).responseImage { response in
             if case .success(let image) = response.result {
                 self.imageView.image = image
@@ -62,5 +133,50 @@ class CarDetailBaseView: UIView{
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         layout()
+    }
+}
+
+extension CarDetailBaseView: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        var width  = collectionView.bounds.width - 5
+        let row    = rows[ indexPath.row ]
+        
+        if (row is UIView){
+            width = (width/2) * 0.6
+        } else {
+            width = (width/2) * 0.4
+        }
+        
+        return CGSize(width: width, height: 30)
+    }
+}
+
+extension CarDetailBaseView: UICollectionViewDataSource, UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return rows.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let row     = rows[ indexPath.row ]
+        let cell    = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        
+        let title = UILabel(frame: CGRect(x: 0, y: 0, width: cell.bounds.size.width, height: cell.bounds.size.height))
+        title.font = UIFont.systemFont(ofSize: 12)
+        
+        if (row is UIView){
+            title.text = (row as! UILabel).text
+            title.textAlignment = .left
+            title.frame.origin.x = 8
+            title.clipsToBounds = true
+            cell.backgroundColor = .white
+        } else {
+            title.text = (row as! String)
+            title.textAlignment = .center
+            cell.backgroundColor = UIColor(red: 247, green: 247, blue: 247)
+        }
+        
+        cell.contentView.addSubview(title)
+        
+        return cell
     }
 }

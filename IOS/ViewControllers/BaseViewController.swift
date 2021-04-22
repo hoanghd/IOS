@@ -6,6 +6,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     lazy var safeView: UIView = {
         let safeView = UIView()
+        safeView.backgroundColor = .white
         safeView.clipsToBounds = true
         return safeView
     }()
