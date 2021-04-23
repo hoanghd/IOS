@@ -32,9 +32,9 @@ class CarDetailQATableViewCell: UITableViewCell {
     lazy var messageLabel: NantesLabel = {
         let label = NantesLabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 14)
-        
-        label.attributedTruncationToken = NSAttributedString(string: "... 続きを見る▼")
+        label.attributedTruncationToken = NSAttributedString(string: "... 続きを見る▼", attributes: [ NSAttributedString.Key.foregroundColor: UIColor.blue ])
         label.numberOfLines = 2
+        label.lineSpacing = 6
         
         label.labelTappedBlock = {
             self.delegate?.tableView(self, label)
@@ -43,15 +43,10 @@ class CarDetailQATableViewCell: UITableViewCell {
         return label
     }()
     
-    lazy var stackView: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [dateLabel, userLabel, messageLabel])
-        view.axis = .vertical
-        
-        view.spacing = 10
-        view.isLayoutMarginsRelativeArrangement = true
-        view.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 18, leading: 18, bottom: 18, trailing: 18)
-        view.layer.borderWidth = 8
-        
+    lazy var bodyView: UIView = {
+        let view = UIView(frame: .zero)
+        view.addSubviews(dateLabel, userLabel, messageLabel)
+        view.layer.borderWidth = 6
         return view
     }()
 }

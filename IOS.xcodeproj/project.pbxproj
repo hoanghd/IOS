@@ -31,8 +31,8 @@
 		C7B294EA2632A11F008E7E37 /* QA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B294E92632A11F008E7E37 /* QA.swift */; };
 		C7B294F52632A304008E7E37 /* QAListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B294F42632A304008E7E37 /* QAListApi.swift */; };
 		C7B295072632ACD3008E7E37 /* CarDetailQATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B295062632ACD3008E7E37 /* CarDetailQATableViewCell.swift */; };
-		C7B2950A2632ACEF008E7E37 /* CarDetailQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B295092632ACEF008E7E37 /* CarDetailQuestionTableViewCell.swift */; };
-		C7B2950D2632AD06008E7E37 /* CarDetailAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B2950C2632AD06008E7E37 /* CarDetailAnswerTableViewCell.swift */; };
+		C7B2950A2632ACEF008E7E37 /* CarDetailAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B295092632ACEF008E7E37 /* CarDetailAnswerTableViewCell.swift */; };
+		C7B2950D2632AD06008E7E37 /* CarDetailQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B2950C2632AD06008E7E37 /* CarDetailQuestionTableViewCell.swift */; };
 		C7C93EAD26256E7000C2C958 /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C93EAC26256E7000C2C958 /* CarListViewController.swift */; };
 		C7F5EEEF262929D8001D5DD6 /* AssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EEEE262929D8001D5DD6 /* AssociatedObject.swift */; };
 		C7F5EF0826297203001D5DD6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EF0726297203001D5DD6 /* MainViewController.swift */; };
@@ -69,8 +69,8 @@
 		C7B294E92632A11F008E7E37 /* QA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QA.swift; sourceTree = "<group>"; };
 		C7B294F42632A304008E7E37 /* QAListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAListApi.swift; sourceTree = "<group>"; };
 		C7B295062632ACD3008E7E37 /* CarDetailQATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailQATableViewCell.swift; sourceTree = "<group>"; };
-		C7B295092632ACEF008E7E37 /* CarDetailQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailQuestionTableViewCell.swift; sourceTree = "<group>"; };
-		C7B2950C2632AD06008E7E37 /* CarDetailAnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailAnswerTableViewCell.swift; sourceTree = "<group>"; };
+		C7B295092632ACEF008E7E37 /* CarDetailAnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailAnswerTableViewCell.swift; sourceTree = "<group>"; };
+		C7B2950C2632AD06008E7E37 /* CarDetailQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		C7C93EAC26256E7000C2C958 /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
 		C7F5EEEE262929D8001D5DD6 /* AssociatedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedObject.swift; sourceTree = "<group>"; };
 		C7F5EF0726297203001D5DD6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 				C759FB7F262E868D00B45F7D /* CarDetailBaseView.swift */,
 				C7B294E026329FB0008E7E37 /* CarDetailQAView.swift */,
 				C7B295062632ACD3008E7E37 /* CarDetailQATableViewCell.swift */,
-				C7B295092632ACEF008E7E37 /* CarDetailQuestionTableViewCell.swift */,
-				C7B2950C2632AD06008E7E37 /* CarDetailAnswerTableViewCell.swift */,
+				C7B295092632ACEF008E7E37 /* CarDetailAnswerTableViewCell.swift */,
+				C7B2950C2632AD06008E7E37 /* CarDetailQuestionTableViewCell.swift */,
 			);
 			path = CarDetail;
 			sourceTree = "<group>";
@@ -371,9 +371,9 @@
 				C78425DB2627E0C20007B9C7 /* DragLargeCollectionViewCell.swift in Sources */,
 				C740710E2626C2F6006C93CA /* MultipleUploadViewController.swift in Sources */,
 				C74071202626DE8E006C93CA /* DragViewController.swift in Sources */,
-				C7B2950D2632AD06008E7E37 /* CarDetailAnswerTableViewCell.swift in Sources */,
+				C7B2950D2632AD06008E7E37 /* CarDetailQuestionTableViewCell.swift in Sources */,
 				C7C93EAD26256E7000C2C958 /* CarListViewController.swift in Sources */,
-				C7B2950A2632ACEF008E7E37 /* CarDetailQuestionTableViewCell.swift in Sources */,
+				C7B2950A2632ACEF008E7E37 /* CarDetailAnswerTableViewCell.swift in Sources */,
 				C7F5EF1F262994CE001D5DD6 /* Car.swift in Sources */,
 				C76930A726317C60001FDB4F /* UILabel.swift in Sources */,
 				C7F5EF0826297203001D5DD6 /* MainViewController.swift in Sources */,

@@ -10,6 +10,8 @@ class CarDetailQAView: UIView{
         tableView.register(CarDetailAnswerTableViewCell.self, forCellReuseIdentifier: "answer")
         tableView.register(CarDetailQuestionTableViewCell.self, forCellReuseIdentifier: "question")
         
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 44
         tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
@@ -56,6 +58,7 @@ extension CarDetailQAView: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row  = rows[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: row.type, for: indexPath) as! CarDetailQATableViewCell
+        cell.selectionStyle = .none
         cell.row = row
         cell.delegate = self
         cell.layoutIfNeeded()
