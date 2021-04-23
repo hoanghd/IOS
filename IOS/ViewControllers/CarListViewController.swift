@@ -15,7 +15,7 @@ class CarListViewController: BaseViewController {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(CarTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(CarListTableViewCell.self, forCellReuseIdentifier: "cell")
         
         tableView.separatorColor = .gray
         tableView.separatorStyle = .singleLine
@@ -70,7 +70,7 @@ extension CarListViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:CarTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarTableViewCell
+        let cell:CarListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarListTableViewCell
         cell.accessoryType = .disclosureIndicator
         cell.row = rows[indexPath.row]
         return cell

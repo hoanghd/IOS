@@ -1,7 +1,7 @@
 import UIKit
 import Alamofire
 
-class CarTableViewCell: UITableViewCell {
+class CarListTableViewCell: UITableViewCell {
     var row: Car? {
         didSet {
             guard let row   = row else { return }

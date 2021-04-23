@@ -22,10 +22,10 @@
 		C759FB80262E868D00B45F7D /* CarDetailBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759FB7F262E868D00B45F7D /* CarDetailBaseView.swift */; };
 		C759FB83262E86A900B45F7D /* CarDetailQAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759FB82262E86A900B45F7D /* CarDetailQAView.swift */; };
 		C76930A726317C60001FDB4F /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76930A626317C60001FDB4F /* UILabel.swift */; };
-		C7802E1A2625825D00518F39 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802E192625825D00518F39 /* CarTableViewCell.swift */; };
-		C78425DB2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DA2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift */; };
-		C78425DE2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DD2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift */; };
-		C78425E72627E5F30007B9C7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425E62627E5F30007B9C7 /* PhotoCollectionViewCell.swift */; };
+		C7802E1A2625825D00518F39 /* CarListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802E192625825D00518F39 /* CarListTableViewCell.swift */; };
+		C78425DB2627E0C20007B9C7 /* DragLargeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DA2627E0C20007B9C7 /* DragLargeCollectionViewCell.swift */; };
+		C78425DE2627E0D70007B9C7 /* DragSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DD2627E0D70007B9C7 /* DragSmallCollectionViewCell.swift */; };
+		C78425E72627E5F30007B9C7 /* DragCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425E62627E5F30007B9C7 /* DragCollectionViewCell.swift */; };
 		C7913ED925F9A97F00D2D6D5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913ED825F9A97F00D2D6D5 /* UIView.swift */; };
 		C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraint.swift */; };
 		C7C93EAD26256E7000C2C958 /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C93EAC26256E7000C2C958 /* CarListViewController.swift */; };
@@ -55,10 +55,10 @@
 		C759FB7F262E868D00B45F7D /* CarDetailBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailBaseView.swift; sourceTree = "<group>"; };
 		C759FB82262E86A900B45F7D /* CarDetailQAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailQAView.swift; sourceTree = "<group>"; };
 		C76930A626317C60001FDB4F /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
-		C7802E192625825D00518F39 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
-		C78425DA2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargePhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		C78425DD2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		C78425E62627E5F30007B9C7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7802E192625825D00518F39 /* CarListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListTableViewCell.swift; sourceTree = "<group>"; };
+		C78425DA2627E0C20007B9C7 /* DragLargeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragLargeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C78425DD2627E0D70007B9C7 /* DragSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragSmallCollectionViewCell.swift; sourceTree = "<group>"; };
+		C78425E62627E5F30007B9C7 /* DragCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7913ED825F9A97F00D2D6D5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		C7C93EAC26256E7000C2C958 /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
@@ -152,9 +152,9 @@
 		C78425E02627E4D50007B9C7 /* Drag */ = {
 			isa = PBXGroup;
 			children = (
-				C78425DA2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift */,
-				C78425DD2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift */,
-				C78425E62627E5F30007B9C7 /* PhotoCollectionViewCell.swift */,
+				C78425DA2627E0C20007B9C7 /* DragLargeCollectionViewCell.swift */,
+				C78425DD2627E0D70007B9C7 /* DragSmallCollectionViewCell.swift */,
+				C78425E62627E5F30007B9C7 /* DragCollectionViewCell.swift */,
 			);
 			path = Drag;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 		C78425E12627E4F10007B9C7 /* CarList */ = {
 			isa = PBXGroup;
 			children = (
-				C7802E192625825D00518F39 /* CarTableViewCell.swift */,
+				C7802E192625825D00518F39 /* CarListTableViewCell.swift */,
 			);
 			path = CarList;
 			sourceTree = "<group>";
@@ -340,18 +340,18 @@
 				C759FB83262E86A900B45F7D /* CarDetailQAView.swift in Sources */,
 				C7F5EF2626299580001D5DD6 /* CarListApi.swift in Sources */,
 				C759FB6A262E62CA00B45F7D /* CarDetailViewController.swift in Sources */,
-				C78425E72627E5F30007B9C7 /* PhotoCollectionViewCell.swift in Sources */,
+				C78425E72627E5F30007B9C7 /* DragCollectionViewCell.swift in Sources */,
 				C71BBFAE25F885D2009845CC /* AppDelegate.swift in Sources */,
 				C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraint.swift in Sources */,
-				C78425DE2627E0D70007B9C7 /* SmallPhotoCollectionViewCell.swift in Sources */,
+				C78425DE2627E0D70007B9C7 /* DragSmallCollectionViewCell.swift in Sources */,
 				C759FB80262E868D00B45F7D /* CarDetailBaseView.swift in Sources */,
 				C7F5EEEF262929D8001D5DD6 /* AssociatedObject.swift in Sources */,
 				C759FB7D262E867700B45F7D /* CarDetailUserView.swift in Sources */,
-				C7802E1A2625825D00518F39 /* CarTableViewCell.swift in Sources */,
+				C7802E1A2625825D00518F39 /* CarListTableViewCell.swift in Sources */,
 				C7913ED925F9A97F00D2D6D5 /* UIView.swift in Sources */,
 				C740710A26268A92006C93CA /* UploadViewController.swift in Sources */,
 				C71BBFC925F88750009845CC /* VFLViewController.swift in Sources */,
-				C78425DB2627E0C20007B9C7 /* LargePhotoCollectionViewCell.swift in Sources */,
+				C78425DB2627E0C20007B9C7 /* DragLargeCollectionViewCell.swift in Sources */,
 				C740710E2626C2F6006C93CA /* MultipleUploadViewController.swift in Sources */,
 				C74071202626DE8E006C93CA /* DragViewController.swift in Sources */,
 				C7C93EAD26256E7000C2C958 /* CarListViewController.swift in Sources */,

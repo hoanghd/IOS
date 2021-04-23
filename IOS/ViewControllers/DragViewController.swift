@@ -36,9 +36,9 @@ class DragViewController: BaseViewController {
         layout.minimumLineSpacing = 0
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        collectionView.register(SmallPhotoCollectionViewCell.self, forCellWithReuseIdentifier: "small")
-        collectionView.register(LargePhotoCollectionViewCell.self, forCellWithReuseIdentifier: "large")
+        collectionView.register(DragCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(DragSmallCollectionViewCell.self, forCellWithReuseIdentifier: "small")
+        collectionView.register(DragLargeCollectionViewCell.self, forCellWithReuseIdentifier: "large")
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.dragInteractionEnabled = true
@@ -92,7 +92,7 @@ extension DragViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let row = rows[ indexPath.row ]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: row["cell"]!, for: indexPath) as! PhotoCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: row["cell"]!, for: indexPath) as! DragCollectionViewCell
         
         cell.backgroundColor = .white
         cell.delegate   = self
@@ -165,7 +165,7 @@ extension DragViewController: UICollectionViewDropDelegate{
     }
 }
 
-extension DragViewController: PhotoCollectionViewCellDelegate{
+extension DragViewController: DragCollectionViewCellDelegate{
     func collectionViewCell(_ collectionViewCell: UICollectionViewCell, _ indexPath: IndexPath?, _ data: [String : Any]?) {
         guard let index = indexPath?.row else { return }
         guard rows.indices.contains(index) else { return }

@@ -1,7 +1,7 @@
 import UIKit
 import Alamofire
 
-class LargePhotoCollectionViewCell: PhotoCollectionViewCell{
+class DragLargeCollectionViewCell: DragCollectionViewCell{
     override var row:[String: String]? {
         didSet {
             guard let row = row else { return }

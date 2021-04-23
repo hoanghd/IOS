@@ -2,7 +2,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class SmallPhotoCollectionViewCell: PhotoCollectionViewCell{
+class DragSmallCollectionViewCell: DragCollectionViewCell{
     override var row:[String: String]? {
         didSet {
             guard let row = row else { return }
