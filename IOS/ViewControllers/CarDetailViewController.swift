@@ -27,6 +27,11 @@ class CarDetailViewController: BaseViewController {
         return view
     }()
     
+    lazy var listView: CarDetailListView = {
+        let view = CarDetailListView(frame: .zero)
+        return view
+    }()
+    
     lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
         view.contentSize = CGSize(width: safeView.frame.width, height: 2000)
@@ -37,7 +42,7 @@ class CarDetailViewController: BaseViewController {
         navigationItem.title = "車両画像"
         
         safeView.addSubviews( scrollView )
-        scrollView.addSubviews( noAnsButton, userInfo, carInfo, qaList )
+        scrollView.addSubviews( noAnsButton, userInfo, carInfo, qaList, listView )
         
         NSLayoutConstraint.activate([
             noAnsButton.widthAnchor.constraint(equalToConstant: 150),
@@ -45,20 +50,22 @@ class CarDetailViewController: BaseViewController {
             
             userInfo.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             carInfo.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-            qaList.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+            qaList.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            listView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
         ])
         
         NSLayoutConstraint.visual(
             [
-                "H:|[scrollView]|": [],
-                "V:|[scrollView]|": [],
-                "V:|-[noAnsButton]-[userInfo]-[carInfo]-[qaList]": []
+                "H:|-[scrollView]-|": [],
+                "V:|-[scrollView]-|": [],
+                "V:|-[noAnsButton]-[userInfo]-[carInfo]-[qaList]-[listView(==1500)]": []
             ],
             [
                 "noAnsButton": noAnsButton,
                 "userInfo": userInfo,
                 "carInfo": carInfo,
                 "qaList": qaList,
+                "listView": listView,
                 "scrollView": scrollView
             ],
             nil
