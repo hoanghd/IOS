@@ -1,7 +1,7 @@
 import UIKit
 import Nantes
 
-class CarDetailChatView: UIView{
+class CarDetailQAView: UIView{
     lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
@@ -18,10 +18,10 @@ class CarDetailChatView: UIView{
         let label = NantesLabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 14)
         
-        label.attributedTruncationToken = NSAttributedString(string: "... more")
-        label.numberOfLines = 3
+        label.attributedTruncationToken = NSAttributedString(string: "... 続きを見る▼")
+        label.numberOfLines = 2
         label.labelTappedBlock = {
-            label.numberOfLines = label.numberOfLines == 0 ? 3 : 0
+            label.numberOfLines = label.numberOfLines == 0 ? 2 : 0
         }
         
         return label
