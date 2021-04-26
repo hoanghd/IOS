@@ -34,8 +34,8 @@ class CarDetailViewController: BaseViewController {
         
         NSLayoutConstraint.visual(
             [
-                "H:|-[scrollView]-|": [],
-                "V:|-[scrollView]-|": [],
+                "H:|[scrollView]|": [],
+                "V:|[scrollView]|": [],
                 "V:|-[noAnsButton]-[userInfo]-[carInfo]-[qaList]-|": []
             ],
             [

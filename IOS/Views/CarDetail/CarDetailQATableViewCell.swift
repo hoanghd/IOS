@@ -32,7 +32,7 @@ class CarDetailQATableViewCell: UITableViewCell {
     lazy var messageLabel: NantesLabel = {
         let label = NantesLabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 14)
-        label.attributedTruncationToken = NSAttributedString(string: "... 続きを見る▼", attributes: [ NSAttributedString.Key.foregroundColor: UIColor.blue ])
+        label.attributedTruncationToken = NSAttributedString(string: "... 続きを見る▼", attributes: [ NSAttributedString.Key.foregroundColor: UIColor(red: 48, green: 114, blue: 180) ])
         label.numberOfLines = 2
         label.lineSpacing = 6
 
