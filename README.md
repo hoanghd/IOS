@@ -10,15 +10,5 @@ extension UICollectionView {
 }
 ~~~
 
-# UIBarButtonItem
-~~~
-	barButtonSystemItem: .trash
-
-	image: UIImage(named: "Back")
-
-	title: "編集"
-    style: .plain
-~~~
-
 https://github.com/TTTAttributedLabel/TTTAttributedLabel
-https://stackoverflow.com/questions/32309247/add-read-more-to-the-end-of-uilabel
+https://www.brihaspatitech.com/blog/local-ios-data-storage-guidelines-for-ios-applications/

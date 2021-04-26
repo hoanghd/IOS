@@ -26,6 +26,18 @@ class MainViewController: UITabBarController {
         return nView
     }()
     
+    lazy var input: UINavigationController = {
+        let nView = UINavigationController(rootViewController: CarInputViewController())
+        
+        nView.tabBarItem = UITabBarItem(
+            title: "Input",
+            image: UIImage(named: "Input"),
+            tag: 2
+        )
+        
+        return nView
+    }()
+    
     lazy var upload: UINavigationController = {
         let nView = UINavigationController(rootViewController: UploadViewController())
         
@@ -51,6 +63,6 @@ class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewControllers = [drag, list, upload, multipleUpload]
+        self.viewControllers = [drag, list, input, upload, multipleUpload]
     }
 }
