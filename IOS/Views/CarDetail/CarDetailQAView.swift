@@ -22,8 +22,6 @@ class CarDetailQAView: UIView{
         tableView.register(CarDetailAnswerTableViewCell.self, forCellReuseIdentifier: "answer")
         tableView.register(CarDetailQuestionTableViewCell.self, forCellReuseIdentifier: "question")
         
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 44
         tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
@@ -31,17 +29,29 @@ class CarDetailQAView: UIView{
         return tableView
     }()
     
+    lazy var answerButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("回答する", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        button.setTitleColor(UIColor(red: 255, green: 255, blue: 255), for: .normal)
+        button.backgroundColor = UIColor(red: 1, green: 122, blue: 255)
+        button.layer.cornerRadius = 8
+        return button
+    }()
+    
     func layout() {
-        addSubviews( tableView, lessButton )
+        addSubviews( lessButton, tableView, answerButton )
         
         NSLayoutConstraint.visual(
             [
                 "H:|[tableView]|": [],
-                "V:|[lessButton]-[tableView]|": [ .alignAllCenterX ]
+                "H:|-[answerButton]-|": [],
+                "V:|[lessButton]-[tableView]-16-[answerButton(==50)]-|": [ .alignAllCenterX ]
             ],
             [
                 "tableView": tableView,
-                "lessButton": lessButton
+                "lessButton": lessButton,
+                "answerButton": answerButton
             ],
             nil
         )
@@ -75,6 +85,7 @@ extension CarDetailQAView: UITableViewDelegate, UITableViewDataSource{
         cell.row = row
         cell.delegate = self
         cell.layoutIfNeeded()
+        cell.updateConstraintsIfNeeded()
         return cell
     }
 }
@@ -87,6 +98,7 @@ extension CarDetailQAView: CarDetailQATableViewCellDelegate{
         
         UIView.animate(withDuration: 0.2, animations: {
             self.layoutIfNeeded()
+            self.updateConstraintsIfNeeded()
         })
     }
 }
