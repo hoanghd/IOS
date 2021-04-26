@@ -4,6 +4,18 @@ import Nantes
 class CarDetailQAView: UIView{
     var rows = [QA]()
     
+    lazy var lessButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("過去のメッセージを閉じる", for: .normal)
+        button.setTitleColor(UIColor(red: 0, green: 82, blue: 163), for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        
+        button.setImage(UIImage(named: "Up")?.resized(16.0,  16.0).withTintColor(UIColor(red: 0, green: 82, blue: 163)), for: .normal)
+        button.semanticContentAttribute = .forceRightToLeft
+        button.sizeToFit()
+        return button
+    }()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(CarDetailQATableViewCell.self, forCellReuseIdentifier: "cell")
@@ -20,15 +32,16 @@ class CarDetailQAView: UIView{
     }()
     
     func layout() {
-        addSubviews( tableView )
+        addSubviews( tableView, lessButton )
         
         NSLayoutConstraint.visual(
             [
                 "H:|[tableView]|": [],
-                "V:|[tableView]|": []
+                "V:|[lessButton]-[tableView]|": [ .alignAllCenterX ]
             ],
             [
-                "tableView": tableView
+                "tableView": tableView,
+                "lessButton": lessButton
             ],
             nil
         )

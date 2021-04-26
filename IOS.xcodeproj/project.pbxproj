@@ -21,6 +21,7 @@
 		C759FB7D262E867700B45F7D /* CarDetailUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759FB7C262E867700B45F7D /* CarDetailUserView.swift */; };
 		C759FB80262E868D00B45F7D /* CarDetailBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759FB7F262E868D00B45F7D /* CarDetailBaseView.swift */; };
 		C76930A726317C60001FDB4F /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76930A626317C60001FDB4F /* UILabel.swift */; };
+		C777A6E426365B41007AFE06 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C777A6E326365B41007AFE06 /* UIImage.swift */; };
 		C7802E1A2625825D00518F39 /* CarListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802E192625825D00518F39 /* CarListTableViewCell.swift */; };
 		C78425DB2627E0C20007B9C7 /* DragLargeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DA2627E0C20007B9C7 /* DragLargeCollectionViewCell.swift */; };
 		C78425DE2627E0D70007B9C7 /* DragSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425DD2627E0D70007B9C7 /* DragSmallCollectionViewCell.swift */; };
@@ -59,6 +60,7 @@
 		C759FB7C262E867700B45F7D /* CarDetailUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailUserView.swift; sourceTree = "<group>"; };
 		C759FB7F262E868D00B45F7D /* CarDetailBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailBaseView.swift; sourceTree = "<group>"; };
 		C76930A626317C60001FDB4F /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		C777A6E326365B41007AFE06 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C7802E192625825D00518F39 /* CarListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListTableViewCell.swift; sourceTree = "<group>"; };
 		C78425DA2627E0C20007B9C7 /* DragLargeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragLargeCollectionViewCell.swift; sourceTree = "<group>"; };
 		C78425DD2627E0D70007B9C7 /* DragSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragSmallCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				C7F5EEEE262929D8001D5DD6 /* AssociatedObject.swift */,
 				C73AD777262D68A100C35EEC /* UIColor.swift */,
 				C76930A626317C60001FDB4F /* UILabel.swift */,
+				C777A6E326365B41007AFE06 /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				C740710A26268A92006C93CA /* UploadViewController.swift in Sources */,
 				C71BBFC925F88750009845CC /* VFLViewController.swift in Sources */,
 				C78425DB2627E0C20007B9C7 /* DragLargeCollectionViewCell.swift in Sources */,
+				C777A6E426365B41007AFE06 /* UIImage.swift in Sources */,
 				C740710E2626C2F6006C93CA /* MultipleUploadViewController.swift in Sources */,
 				C74071202626DE8E006C93CA /* DragViewController.swift in Sources */,
 				C7B2950D2632AD06008E7E37 /* CarDetailQuestionTableViewCell.swift in Sources */,

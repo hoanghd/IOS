@@ -52,7 +52,7 @@ class CarDetailViewController: BaseViewController {
             [
                 "H:|-[scrollView]-|": [],
                 "V:|-[scrollView]-|": [],
-                "V:|-[noAnsButton]-[userInfo]-[carInfo]-[qaList(==2000)]": []
+                "V:|-[noAnsButton]-[userInfo]-[carInfo]-[qaList(==4000)]-|": []
             ],
             [
                 "noAnsButton": noAnsButton,
