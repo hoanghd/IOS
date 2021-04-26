@@ -164,9 +164,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C777A71C2636A703007AFE06 /* CarInput */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CarInput;
+			sourceTree = "<group>";
+		};
 		C7802E182625824C00518F39 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C777A71C2636A703007AFE06 /* CarInput */,
 				C759FB7A262E841100B45F7D /* CarDetail */,
 				C78425E12627E4F10007B9C7 /* CarList */,
 				C78425E02627E4D50007B9C7 /* Drag */,
