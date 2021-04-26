@@ -12,26 +12,10 @@ class CarDetailViewController: BaseViewController {
         return button
     }()
     
-    lazy var userInfo: CarDetailUserView = {
-        let view = CarDetailUserView(frame: .zero)
-        return view
-    }()
-    
-    lazy var carInfo: CarDetailBaseView = {
-        let view = CarDetailBaseView(frame: .zero)
-        return view
-    }()
-    
-    lazy var qaList: CarDetailQAView = {
-        let view = CarDetailQAView(frame: .zero)
-        return view
-    }()
-    
-    lazy var scrollView: UIScrollView = {
-        let view = UIScrollView()
-        view.contentSize = CGSize(width: safeView.frame.width, height: 5000)
-        return view
-    }()
+    lazy var userInfo   = CarDetailUserView()
+    lazy var carInfo    = CarDetailBaseView()
+    lazy var qaList     = CarDetailQAView()
+    lazy var scrollView = UIScrollView()
     
     override func layout() {
         navigationItem.title = "車両画像"
@@ -52,7 +36,7 @@ class CarDetailViewController: BaseViewController {
             [
                 "H:|-[scrollView]-|": [],
                 "V:|-[scrollView]-|": [],
-                "V:|-[noAnsButton]-[userInfo]-[carInfo]-[qaList(==4000)]-|": []
+                "V:|-[noAnsButton]-[userInfo]-[carInfo]-[qaList]-|": []
             ],
             [
                 "noAnsButton": noAnsButton,

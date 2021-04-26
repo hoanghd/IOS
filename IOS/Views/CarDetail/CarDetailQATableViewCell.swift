@@ -35,13 +35,14 @@ class CarDetailQATableViewCell: UITableViewCell {
         label.attributedTruncationToken = NSAttributedString(string: "... 続きを見る▼", attributes: [ NSAttributedString.Key.foregroundColor: UIColor.blue ])
         label.numberOfLines = 2
         label.lineSpacing = 6
-        
+
         label.labelTappedBlock = {
             self.delegate?.tableView(self, label)
         }
-        
+
         return label
     }()
+    
     
     lazy var bodyView: UIView = {
         let view = UIView(frame: .zero)

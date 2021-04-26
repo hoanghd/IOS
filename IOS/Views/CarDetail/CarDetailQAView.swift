@@ -16,8 +16,8 @@ class CarDetailQAView: UIView{
         return button
     }()
     
-    lazy var tableView: UITableView = {
-        let tableView = UITableView()
+    lazy var tableView: ContentSizedTableView = {
+        let tableView = ContentSizedTableView()
         tableView.register(CarDetailQATableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.register(CarDetailAnswerTableViewCell.self, forCellReuseIdentifier: "answer")
         tableView.register(CarDetailQuestionTableViewCell.self, forCellReuseIdentifier: "question")
@@ -84,5 +84,9 @@ extension CarDetailQAView: CarDetailQATableViewCellDelegate{
         tableView.beginUpdates()
         label.numberOfLines = label.numberOfLines == 0 ? 2 : 0
         tableView.endUpdates()
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.layoutIfNeeded()
+        })
     }
 }
