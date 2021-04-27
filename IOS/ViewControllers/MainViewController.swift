@@ -32,7 +32,19 @@ class MainViewController: UITabBarController {
         nView.tabBarItem = UITabBarItem(
             title: "Input",
             image: UIImage(named: "Input"),
-            tag: 2
+            tag: 3
+        )
+        
+        return nView
+    }()
+    
+    lazy var detail: UINavigationController = {
+        let nView = UINavigationController(rootViewController: DetailViewController())
+        
+        nView.tabBarItem = UITabBarItem(
+            title: "Detail",
+            image: UIImage(named: "Detail"),
+            tag: 4
         )
         
         return nView
@@ -44,7 +56,7 @@ class MainViewController: UITabBarController {
         nView.tabBarItem = UITabBarItem(
             title: "Upload",
             image: UIImage(named: "Upload"),
-            tag: 3
+            tag: 5
         )
         
         return nView
@@ -55,7 +67,7 @@ class MainViewController: UITabBarController {
         
         nView.tabBarItem = UITabBarItem(
             tabBarSystemItem: .bookmarks,
-            tag: 4
+            tag: 6
         )
         
         return nView
@@ -63,6 +75,6 @@ class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewControllers = [drag, list, input, upload, multipleUpload]
+        self.viewControllers = [drag, list, input, detail, upload, multipleUpload]
     }
 }
