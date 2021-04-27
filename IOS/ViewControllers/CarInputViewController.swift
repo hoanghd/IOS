@@ -1,7 +1,7 @@
 import UIKit
 
 class CarInputViewController: BaseViewController {
-    let options = ["English", "Maths", "History", "German", "Science"]
+    var displacements = [Displacement]()
     
     lazy var textField: UITextField = {
         let input = UITextField()
@@ -99,6 +99,8 @@ class CarInputViewController: BaseViewController {
             ],
             nil
         )
+        
+        self.displacements = Bundle.plist("Displacements")
     }
 }
 
@@ -108,14 +110,14 @@ extension CarInputViewController: UIPickerViewDataSource, UIPickerViewDelegate{
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return options.count
+        return displacements.count
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-      return options[row]
+        return displacements[row].text
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        textField.text = options[row]
+        textField.text = displacements[row].text
     }
 }
