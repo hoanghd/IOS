@@ -10,5 +10,4 @@ extension UICollectionView {
 }
 ~~~
 
-https://github.com/TTTAttributedLabel/TTTAttributedLabel
 https://www.brihaspatitech.com/blog/local-ios-data-storage-guidelines-for-ios-applications/
