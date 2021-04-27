@@ -55,26 +55,17 @@ class CarInputViewController: BaseViewController {
     }()
     
     lazy var toolBar: UIToolbar = {
-        let toolbar = UIToolbar()
-        toolbar.barStyle = .default
-        toolbar.isTranslucent = true
-        toolbar.tintColor = UIColor.black
-        toolbar.sizeToFit()
-        
-        toolbar.setItems([
-            UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneClick)),
+        let toolbar = UIToolbar(frame: .zero)
+        toolbar.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        toolbar.items = [
             UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelClick))
-        ], animated: false)
+            UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneClick))
+        ]
         
         return toolbar
     }()
     
     @objc func doneClick() {
-        textField.resignFirstResponder()
-    }
-    
-    @objc func cancelClick() {
         textField.resignFirstResponder()
     }
     
