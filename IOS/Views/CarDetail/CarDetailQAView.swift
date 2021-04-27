@@ -56,7 +56,7 @@ class CarDetailQAView: UIView{
             nil
         )
         
-        QAListApi.get({(rows) in
+        ResultApi.findAll("https://hoanghd.github.io/qa.json", {(rows: [QA]) in
             self.rows = rows
             self.tableView.reloadData()
         })

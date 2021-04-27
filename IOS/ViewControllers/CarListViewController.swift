@@ -57,7 +57,7 @@ class CarListViewController: BaseViewController {
             nil
         )
         
-        CarListApi.get(1, {(rows) in
+        ResultApi.findAll("https://hoanghd.github.io/data.json", {(rows: [Car]) in
             self.rows = rows
             self.tableView.reloadData()
         })
