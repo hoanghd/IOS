@@ -9,5 +9,6 @@ extension UICollectionView {
      }
 }
 ~~~
-
+https://developer.apple.com/documentation/uikit/uirefreshcontrol
+https://developer.apple.com/design/human-interface-guidelines/ios/controls/pickers/
 https://www.brihaspatitech.com/blog/local-ios-data-storage-guidelines-for-ios-applications/

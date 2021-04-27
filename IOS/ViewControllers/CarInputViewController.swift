@@ -1,7 +1,7 @@
 import UIKit
 
 class CarInputViewController: BaseViewController {
-    var displacements = [Displacement]()
+    var displacements: [Displacement] = { Bundle.plist("Displacements") }()
     
     lazy var textField: UITextField = {
         let input = UITextField()
@@ -41,6 +41,7 @@ class CarInputViewController: BaseViewController {
     
     lazy var datePicker: UIDatePicker = {
         let input = UIDatePicker()
+        input.locale = .current
         input.datePickerMode = .date
         input.preferredDatePickerStyle = .compact
         return input
@@ -50,6 +51,9 @@ class CarInputViewController: BaseViewController {
         let input = UIPickerView()
         input.dataSource = self
         input.delegate = self
+        
+        input.isOpaque = false
+        input.tintColor = .clear
         input.backgroundColor = UIColor.white
         return input
     }()
@@ -90,8 +94,6 @@ class CarInputViewController: BaseViewController {
             ],
             nil
         )
-        
-        self.displacements = Bundle.plist("Displacements")
     }
 }
 
