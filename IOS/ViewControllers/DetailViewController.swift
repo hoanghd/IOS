@@ -55,7 +55,7 @@ class DetailViewController: BaseViewController {
                     label: "View",
                     value: "Standard",
                     accessories: [
-                        .disclosureIndicator(options: .init(tintColor: .systemGray)),
+                        .disclosureIndicator(options: .init(tintColor: .systemGray))
                     ]
                 )
             ]
