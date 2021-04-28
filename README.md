@@ -32,3 +32,6 @@ https://www.donnywals.com/how-to-add-a-custom-accessory-to-a-uicollectionviewlis
 
 ICON
 https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/
+
+Cell custom
+https://stackoverflow.com/questions/64177711/uicollectionviewlistcell-and-custom-cell-accessory-in-ios-14
