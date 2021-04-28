@@ -12,7 +12,6 @@
 		C71BBFB725F885D6009845CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C71BBFB625F885D6009845CC /* Assets.xcassets */; };
 		C71BBFBA25F885D6009845CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71BBFB825F885D6009845CC /* LaunchScreen.storyboard */; };
 		C71BBFC425F8865D009845CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71BBFC325F8865D009845CC /* BaseViewController.swift */; };
-		C72D3816263806DD00F7FC3A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72D3815263806DD00F7FC3A /* DetailViewController.swift */; };
 		C73AD778262D68A100C35EEC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AD777262D68A100C35EEC /* UIColor.swift */; };
 		C740710A26268A92006C93CA /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740710926268A92006C93CA /* UploadViewController.swift */; };
 		C740710E2626C2F6006C93CA /* MultipleUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740710D2626C2F5006C93CA /* MultipleUploadViewController.swift */; };
@@ -30,6 +29,7 @@
 		C78425E72627E5F30007B9C7 /* DragCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425E62627E5F30007B9C7 /* DragCollectionViewCell.swift */; };
 		C7913ED925F9A97F00D2D6D5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913ED825F9A97F00D2D6D5 /* UIView.swift */; };
 		C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraint.swift */; };
+		C7AAC11E26394A8200BA55E1 /* CollecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AAC11D26394A8200BA55E1 /* CollecViewController.swift */; };
 		C7B294E126329FB0008E7E37 /* CarDetailQAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B294E026329FB0008E7E37 /* CarDetailQAView.swift */; };
 		C7B294EA2632A11F008E7E37 /* QA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B294E92632A11F008E7E37 /* QA.swift */; };
 		C7B295072632ACD3008E7E37 /* CarDetailQATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B295062632ACD3008E7E37 /* CarDetailQATableViewCell.swift */; };
@@ -55,7 +55,6 @@
 		C71BBFB925F885D6009845CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C71BBFBB25F885D6009845CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C71BBFC325F8865D009845CC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		C72D3815263806DD00F7FC3A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C73AD777262D68A100C35EEC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C740710926268A92006C93CA /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		C740710D2626C2F5006C93CA /* MultipleUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleUploadViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		C78425E62627E5F30007B9C7 /* DragCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7913ED825F9A97F00D2D6D5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
+		C7AAC11D26394A8200BA55E1 /* CollecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollecViewController.swift; sourceTree = "<group>"; };
 		C7B294E026329FB0008E7E37 /* CarDetailQAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailQAView.swift; sourceTree = "<group>"; };
 		C7B294E92632A11F008E7E37 /* QA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QA.swift; sourceTree = "<group>"; };
 		C7B295062632ACD3008E7E37 /* CarDetailQATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailQATableViewCell.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 				C740710D2626C2F5006C93CA /* MultipleUploadViewController.swift */,
 				C740711F2626DE8E006C93CA /* DragViewController.swift */,
 				C777A6F82636941E007AFE06 /* CarInputViewController.swift */,
-				C72D3815263806DD00F7FC3A /* DetailViewController.swift */,
+				C7AAC11D26394A8200BA55E1 /* CollecViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -381,7 +381,6 @@
 				C7C3B3DB2637A09700107399 /* Bundle.swift in Sources */,
 				C7C3B3FA2637AE8500107399 /* Displacement.swift in Sources */,
 				C759FB6A262E62CA00B45F7D /* CarDetailViewController.swift in Sources */,
-				C72D3816263806DD00F7FC3A /* DetailViewController.swift in Sources */,
 				C78425E72627E5F30007B9C7 /* DragCollectionViewCell.swift in Sources */,
 				C71BBFAE25F885D2009845CC /* AppDelegate.swift in Sources */,
 				C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraint.swift in Sources */,
@@ -405,6 +404,7 @@
 				C7F5EF1F262994CE001D5DD6 /* Car.swift in Sources */,
 				C76930A726317C60001FDB4F /* UILabel.swift in Sources */,
 				C7F5EF0826297203001D5DD6 /* MainViewController.swift in Sources */,
+				C7AAC11E26394A8200BA55E1 /* CollecViewController.swift in Sources */,
 				C7B295072632ACD3008E7E37 /* CarDetailQATableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

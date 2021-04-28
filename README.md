@@ -18,3 +18,14 @@ https://www.brihaspatitech.com/blog/local-ios-data-storage-guidelines-for-ios-ap
 https://dev.classmethod.jp/articles/wwdc-20-lists-in-uicollectionview/#toc-7
 https://useyourloaf.com/blog/creating-lists-with-collection-view/
 https://swiftsenpai.com/development/collectionview-expandable-list-part1/
+
+
+UISwitch UICollectionView cell
+https://www.biteinteractive.com/user-interactive-cell-configurations-in-ios-14/
+search
+https://www.raywenderlich.com/8241072-ios-tutorial-collection-view-and-diffable-data-source
+
+UICollectionViewListCell.accessories
+https://www.donnywals.com/how-to-add-accessories-to-a-uicollectionviewlistcell/
+
+https://www.donnywals.com/how-to-add-a-custom-accessory-to-a-uicollectionviewlistcell/

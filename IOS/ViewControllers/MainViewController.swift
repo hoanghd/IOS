@@ -39,7 +39,7 @@ class MainViewController: UITabBarController {
     }()
     
     lazy var detail: UINavigationController = {
-        let nView = UINavigationController(rootViewController: DetailViewController())
+        let nView = UINavigationController(rootViewController: CollecViewController())
         
         nView.tabBarItem = UITabBarItem(
             title: "Detail",
