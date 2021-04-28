@@ -17,3 +17,4 @@ https://www.brihaspatitech.com/blog/local-ios-data-storage-guidelines-for-ios-ap
 
 https://dev.classmethod.jp/articles/wwdc-20-lists-in-uicollectionview/#toc-7
 https://useyourloaf.com/blog/creating-lists-with-collection-view/
+https://swiftsenpai.com/development/collectionview-expandable-list-part1/
