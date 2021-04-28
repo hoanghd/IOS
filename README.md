@@ -29,3 +29,6 @@ UICollectionViewListCell.accessories
 https://www.donnywals.com/how-to-add-accessories-to-a-uicollectionviewlistcell/
 
 https://www.donnywals.com/how-to-add-a-custom-accessory-to-a-uicollectionviewlistcell/
+
+ICON
+https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/

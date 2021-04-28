@@ -29,7 +29,7 @@
 		C78425E72627E5F30007B9C7 /* DragCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78425E62627E5F30007B9C7 /* DragCollectionViewCell.swift */; };
 		C7913ED925F9A97F00D2D6D5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913ED825F9A97F00D2D6D5 /* UIView.swift */; };
 		C7913EDD25F9D1C200D2D6D5 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraint.swift */; };
-		C7AAC11E26394A8200BA55E1 /* CollecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AAC11D26394A8200BA55E1 /* CollecViewController.swift */; };
+		C7AAC11E26394A8200BA55E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AAC11D26394A8200BA55E1 /* DetailViewController.swift */; };
 		C7B294E126329FB0008E7E37 /* CarDetailQAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B294E026329FB0008E7E37 /* CarDetailQAView.swift */; };
 		C7B294EA2632A11F008E7E37 /* QA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B294E92632A11F008E7E37 /* QA.swift */; };
 		C7B295072632ACD3008E7E37 /* CarDetailQATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B295062632ACD3008E7E37 /* CarDetailQATableViewCell.swift */; };
@@ -72,7 +72,7 @@
 		C78425E62627E5F30007B9C7 /* DragCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7913ED825F9A97F00D2D6D5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C7913EDC25F9D1C200D2D6D5 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
-		C7AAC11D26394A8200BA55E1 /* CollecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollecViewController.swift; sourceTree = "<group>"; };
+		C7AAC11D26394A8200BA55E1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C7B294E026329FB0008E7E37 /* CarDetailQAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailQAView.swift; sourceTree = "<group>"; };
 		C7B294E92632A11F008E7E37 /* QA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QA.swift; sourceTree = "<group>"; };
 		C7B295062632ACD3008E7E37 /* CarDetailQATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailQATableViewCell.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 				C740710D2626C2F5006C93CA /* MultipleUploadViewController.swift */,
 				C740711F2626DE8E006C93CA /* DragViewController.swift */,
 				C777A6F82636941E007AFE06 /* CarInputViewController.swift */,
-				C7AAC11D26394A8200BA55E1 /* CollecViewController.swift */,
+				C7AAC11D26394A8200BA55E1 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -404,7 +404,7 @@
 				C7F5EF1F262994CE001D5DD6 /* Car.swift in Sources */,
 				C76930A726317C60001FDB4F /* UILabel.swift in Sources */,
 				C7F5EF0826297203001D5DD6 /* MainViewController.swift in Sources */,
-				C7AAC11E26394A8200BA55E1 /* CollecViewController.swift in Sources */,
+				C7AAC11E26394A8200BA55E1 /* DetailViewController.swift in Sources */,
 				C7B295072632ACD3008E7E37 /* CarDetailQATableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

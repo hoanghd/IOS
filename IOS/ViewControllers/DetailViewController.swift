@@ -1,16 +1,22 @@
 import UIKit
 
-class CollecViewController: BaseViewController {
-    struct Section: Hashable {
+class DetailViewController: BaseViewController {
+    struct Section: Equatable {
         let header: String
         let footer: String
         let items: [Item]
     }
     
-    struct Item: Hashable {
+    struct Item: Equatable {
+        let icon: String
         let label: String
         let value: String
+        let accessories: [UICellAccessory]
         private let identifier = UUID()
+        
+        static func ==(lhs: Item, rhs: Item) -> Bool {
+            return lhs.identifier == rhs.identifier
+        }
     }
     
     let form = [
@@ -18,8 +24,25 @@ class CollecViewController: BaseViewController {
             header: "Brightness",
             footer: "",
             items: [
-                Item(label: "Auto-Lock", value: "Never"),
-                Item(label: "Raise to Wake", value: "-")
+                Item(
+                    icon: "applelogo",
+                    label: "Auto-Lock",
+                    value: "",
+                    accessories: [
+                        .checkmark(options: .init(isHidden: false, tintColor: .systemBlue))
+                    ]
+                ),
+                Item(
+                    icon: "homekit",
+                    label: "Raise to Wake",
+                    value: "",
+                    accessories: [
+                        .customView(configuration: UICellAccessory.CustomViewConfiguration(
+                            customView: UISwitch(),
+                            placement: .trailing(displayed: .always)
+                        ))
+                    ]
+                )
             ]
         ),
         
@@ -27,9 +50,50 @@ class CollecViewController: BaseViewController {
             header: "Display zoom",
             footer: "Choose a view for iphone. Zoomed shows larger controls. Standard shows more content.",
             items: [
-                Item(label: "View", value: "Standard")
+                Item(
+                    icon: "swift",
+                    label: "View",
+                    value: "Standard",
+                    accessories: [
+                        .disclosureIndicator(options: .init(tintColor: .systemGray)),
+                    ]
+                )
             ]
-        )
+        ),
+        
+        Section(
+            header: "Included Controls",
+            footer: "",
+            items: [
+                Item(
+                    icon: "xserve",
+                    label: "Flaslight",
+                    value: "",
+                    accessories: [
+                        .delete(displayed: .always, options: .init(tintColor: .systemRed)),
+                        .reorder(displayed: .always, options: .init(tintColor: .systemGray, showsVerticalSeparator: false)),
+                    ]
+                ),
+                Item(
+                    icon: "video.circle",
+                    label: "Timer",
+                    value: "",
+                    accessories: [
+                        .delete(displayed: .always, options: .init(tintColor: .systemRed)),
+                        .reorder(displayed: .always, options: .init(tintColor: .systemGray, showsVerticalSeparator: false)),
+                    ]
+                ),
+                Item(
+                    icon: "touchid",
+                    label: "Calculator",
+                    value: "",
+                    accessories: [
+                        .delete(displayed: .always, options: .init(tintColor: .systemRed)),
+                        .reorder(displayed: .always, options: .init(tintColor: .systemGray, showsVerticalSeparator: false)),
+                    ]
+                )
+            ]
+        ),
     ]
     
     lazy var collectionView: UICollectionView = {
@@ -69,7 +133,7 @@ class CollecViewController: BaseViewController {
     }
 }
 
-extension CollecViewController: UICollectionViewDataSource, UICollectionViewDelegate{
+extension DetailViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return form.count
     }
@@ -112,16 +176,10 @@ extension CollecViewController: UICollectionViewDataSource, UICollectionViewDele
         var content = UIListContentConfiguration.valueCell()
         content.text = item.label
         content.secondaryText = item.value
-        content.image = UIImage(systemName: "globe")
+        content.image = UIImage(systemName: item.icon)
         content.imageProperties.preferredSymbolConfiguration = .init(font: content.textProperties.font, scale: .large)
         
-        cell.accessories = [
-            .checkmark(options: .init(isHidden: false, tintColor: .systemGray)),
-            .disclosureIndicator(options: .init(tintColor: .systemGray)),
-            .delete(displayed: .always, options: .init(tintColor: .systemRed)),
-            .reorder(displayed: .always, options: .init(tintColor: .systemGray, showsVerticalSeparator: false))
-        ]
-        
+        cell.accessories = item.accessories
         cell.contentConfiguration = content
         cell.tintColor = .systemPurple
         return cell
